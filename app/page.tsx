@@ -51,9 +51,11 @@ export default function HomePage() {
         aria-label="About"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-card py-16"
       >
-        <div className="mx-auto max-w-2xl space-y-8 px-4 text-center">
-          <p className="text-lg text-muted">{hero.identity}</p>
-          <p className="font-display text-2xl italic text-accent md:text-3xl">
+        <div className="mx-auto space-y-8 px-4 text-center">
+          <p className="mx-auto max-w-4xl font-display text-2xl leading-snug text-foreground md:text-3xl">
+            {hero.identity}
+          </p>
+          <p className="mx-auto max-w-2xl font-display text-2xl italic text-accent md:text-3xl">
             {hero.energy}
           </p>
         </div>
