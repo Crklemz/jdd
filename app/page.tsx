@@ -96,7 +96,7 @@ export default function HomePage() {
         aria-label="Event types"
         className="mt-16 grid min-h-[320px] grid-cols-1 overflow-hidden rounded-xl border border-border md:grid-cols-2"
       >
-        <div className="flex flex-col justify-center gap-4 bg-card p-6 md:order-2 md:p-8">
+        <div className="flex flex-col justify-center gap-4 bg-card p-6 md:order-1 md:p-8">
           <p className="font-display text-2xl text-foreground">
             {eventTypesIntro}
           </p>
@@ -110,7 +110,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="relative min-h-[240px] md:order-1 md:min-h-0">
+        <div className="relative min-h-[240px] md:order-2 md:min-h-0">
           <Image
             src={`${LANDING}/3.jpg`}
             alt={sectionImageAlts.eventTypes}
