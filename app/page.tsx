@@ -21,31 +21,19 @@ export default function HomePage() {
 
   return (
     <div className="space-y-0 py-8">
-      {/* Video */}
-      <section className="overflow-hidden rounded-xl">
+      {/* Hero with video background */}
+      <section
+        aria-label="Introduction"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex min-h-[70vh] w-screen items-center justify-center overflow-hidden"
+      >
         <video
           src={signatureVideoPath}
           autoPlay
           muted
           loop
           playsInline
-          className="h-auto w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           aria-label={videoAriaLabel}
-        />
-      </section>
-
-      {/* Hero with background image */}
-      <section
-        aria-label="Introduction"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[70vh] w-screen items-center justify-center overflow-hidden"
-      >
-        <Image
-          src={`${LANDING}/1.jpg`}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority
         />
         <div className="absolute inset-0 bg-background/80" aria-hidden />
         <div className="relative z-10 mx-4 max-w-2xl space-y-6 text-center">
