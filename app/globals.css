@@ -54,6 +54,51 @@ body {
   animation: ticker 65s linear infinite;
 }
 
+/* Ticker strip: muted amber/purple with orb-like animation */
+.ticker-strip {
+  --ticker-amber: rgba(140, 110, 70, 0.22);
+  --ticker-gold: rgba(160, 130, 75, 0.08);
+  --ticker-purple: rgba(90, 65, 110, 0.28);
+  background:
+    radial-gradient(
+      ellipse 120% 80% at 20% 50%,
+      var(--ticker-amber),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 100% 100% at 50% 50%,
+      var(--ticker-gold),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse 120% 80% at 80% 50%,
+      var(--ticker-purple),
+      transparent 50%
+    ),
+    linear-gradient(
+      105deg,
+      rgba(80, 60, 90, 0.18),
+      rgba(100, 75, 60, 0.1),
+      rgba(75, 55, 85, 0.18)
+    );
+  background-size: 200% 100%, 200% 200%, 200% 100%, 100% 100%;
+  background-position: 0% 50%, 50% 50%, 100% 50%, 0 0;
+  animation: ticker-orb 12s ease-in-out infinite;
+}
+
+@keyframes ticker-orb {
+  0%,
+  100% {
+    background-position: 0% 50%, 50% 50%, 100% 50%, 0 0;
+  }
+  33% {
+    background-position: 100% 50%, 20% 80%, 0% 50%, 0 0;
+  }
+  66% {
+    background-position: 50% 50%, 80% 20%, 50% 50%, 0 0;
+  }
+}
+
 /* Horizontal scroll gallery - no scrollbar */
 .scroll-gallery {
   scrollbar-width: none;

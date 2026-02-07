@@ -60,7 +60,7 @@ export default function HomePage() {
           <p className="text-sm text-center uppercase tracking-wider text-muted">
             {skillsHeading}
           </p>
-          <div className="overflow-hidden border-y border-border py-3">
+          <div className="ticker-strip overflow-hidden border-y border-border py-6">
             <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
               {[...skillsList, ...skillsList].map((skill, i) => (
                 <span key={`${skill}-${i}`} className="text-lg text-foreground">
@@ -80,50 +80,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Skills: image left, ticker right */}
-      <section
-        aria-label="Skills and passions"
-        className="mt-16 grid min-h-[320px] grid-cols-1 overflow-hidden rounded-xl border border-border md:grid-cols-2"
-      >
-        <div className="relative min-h-[240px] md:min-h-0">
-          <Image
-            src={`${LANDING}/2.jpg`}
-            alt={sectionImageAlts.skills}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
-
-      </section>
-
-      {/* Event types: text left, image right */}
+      {/* Event types */}
       <section
         aria-label="Event types"
-        className="mt-16 grid min-h-[320px] grid-cols-1 overflow-hidden rounded-xl border border-border md:grid-cols-2"
+        className="mt-16 flex min-h-[320px] flex-col overflow-hidden"
       >
-        <div className="flex flex-col justify-center gap-4 bg-card p-6 md:order-1 md:p-8">
-          <p className="font-display text-2xl text-foreground">
+        <div className="flex flex-col justify-center p-6 md:p-8">
+          <p className="font-display pb-6 text-center text-2xl text-foreground">
             {eventTypesIntro}
           </p>
-          <div className="overflow-hidden border-y border-border py-3">
-            <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
-              {[...eventTypesList, ...eventTypesList].map((event, i) => (
-                <span key={`${event}-${i}`} className="text-muted">
-                  ({event})
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
-        <div className="relative min-h-[240px] md:order-2 md:min-h-0">
-          <Image
-            src={`${LANDING}/3.jpg`}
-            alt={sectionImageAlts.eventTypes}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+        <div className="overflow-hidden border-y border-border py-3">
+          <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
+            {[...eventTypesList, ...eventTypesList].map((event, i) => (
+              <span key={`${event}-${i}`} className="text-muted">
+                ({event})
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
