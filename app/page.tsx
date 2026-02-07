@@ -1,65 +1,100 @@
-import Image from "next/image";
+import { homeContent } from "@/content";
+import { ScrollGallery } from "./components/ScrollGallery";
 
-export default function Home() {
+export default function HomePage() {
+  const { hero, skillsList, eventTypesList, reviewQuotes, landingImagePaths, signatureVideoPath } =
+    homeContent;
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="space-y-16 py-8">
+      {/* Video */}
+      <section className="overflow-hidden rounded-xl">
+        <video
+          src={signatureVideoPath}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-auto w-full object-cover"
+          aria-label="Jester Dapper Dan signature video"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      </section>
+
+      {/* Hero */}
+      <section className="space-y-6 text-center">
+        <p className="text-lg uppercase tracking-widest text-[var(--accent)]">
+          {hero.tagline}
+        </p>
+        <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl">
+          {hero.invocation}
+        </h1>
+        <p className="mx-auto max-w-2xl text-[var(--muted)]">{hero.identity}</p>
+        <p className="font-display text-xl italic text-[var(--accent)]">
+          {hero.energy}
+        </p>
+      </section>
+
+      {/* Skills list - scrolling ticker */}
+      <section aria-label="Skills and passions">
+        <p className="mb-2 text-center text-sm uppercase tracking-wider text-[var(--muted)]">
+          Jack of all trades · Trickster jester of many hats
+        </p>
+        <div className="overflow-hidden border-y border-[var(--border)] py-4">
+          <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+            {[...skillsList, ...skillsList].map((skill, i) => (
+              <span key={`${skill}-${i}`} className="text-lg text-[var(--foreground)]">
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Event types - scrolling ticker */}
+      <section className="text-center">
+        <p className="mb-4 font-display text-2xl">
+          Book me to bring my signature electrifying energy, exuberant whimsy &
+          next-level excitement to transform your event:
+        </p>
+        <div className="overflow-hidden border-y border-[var(--border)] py-4">
+          <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
+            {[...eventTypesList, ...eventTypesList].map((event, i) => (
+              <span key={`${event}-${i}`} className="text-[var(--muted)]">
+                ({event})
+              </span>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Reviews ticker */}
+      <section aria-label="Reviews">
+        <div className="overflow-hidden border-y border-[var(--border)] bg-[var(--card)] py-4">
+          <div className="flex w-max gap-16 whitespace-nowrap animate-ticker">
+            {[...reviewQuotes, ...reviewQuotes].map((quote, i) => (
+              <span
+                key={`${quote}-${i}`}
+                className="font-display text-xl italic text-[var(--accent)]"
+              >
+                {quote}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Two scrolling galleries */}
+      <section aria-label="Gallery">
+        <ScrollGallery
+          imagePaths={landingImagePaths.slice(0, 6)}
+          altPrefix="Jester Dapper Dan"
+          className="mb-4"
+        />
+        <ScrollGallery
+          imagePaths={landingImagePaths.slice(6, 11)}
+          altPrefix="Jester Dapper Dan"
+        />
+      </section>
     </div>
   );
 }
