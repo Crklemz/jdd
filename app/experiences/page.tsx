@@ -25,14 +25,14 @@ export default function ExperiencesPage() {
         <h1 className="font-display text-4xl font-bold md:text-5xl">
           Bookable Realms
         </h1>
-        <p className="mt-4 text-lg text-[var(--muted)]">{introHeading}</p>
+        <p className="mt-4 text-lg text-muted">{introHeading}</p>
       </section>
 
       {/* Event types ticker */}
-      <section className="overflow-hidden border-y border-[var(--border)] py-4">
+      <section className="overflow-hidden border-y border-border py-4">
         <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
           {[...eventTypesList, ...eventTypesList].map((event, i) => (
-            <span key={`${event}-${i}`} className="text-[var(--muted)]">
+            <span key={`${event}-${i}`} className="text-muted">
               ({event})
             </span>
           ))}
@@ -44,34 +44,34 @@ export default function ExperiencesPage() {
         {realmBlurbs.map((realm) => (
           <div
             key={realm.title}
-            className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-6"
+            className="rounded-xl border border-border bg-card p-6"
           >
-            <h2 className="font-display text-xl font-semibold text-[var(--accent)]">
+            <h2 className="font-display text-xl font-semibold text-accent">
               {realm.title}
             </h2>
-            <p className="mt-2 text-[var(--muted)]">{realm.description}</p>
+            <p className="mt-2 text-muted">{realm.description}</p>
           </div>
         ))}
       </section>
 
       {/* Signature Jester Fantasies */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-[var(--accent)]">
+        <h2 className="font-display text-2xl font-semibold text-accent">
           {fantasiesHeading}
         </h2>
         <ul className="mt-4 space-y-2">
           {jesterFantasies.map((fantasy) => (
-            <li key={fantasy.name} className="text-[var(--foreground)]">
+            <li key={fantasy.name} className="text-foreground">
               <span className="font-medium">{fantasy.name}</span>
               {fantasy.tags.length > 0 && (
-                <span className="ml-2 text-sm text-[var(--muted)]">
+                <span className="ml-2 text-sm text-muted">
                   (Tags: {fantasy.tags.join(" / ")})
                 </span>
               )}
             </li>
           ))}
         </ul>
-        <p className="mt-4 italic text-[var(--muted)]">{customFantasiesNote}</p>
+        <p className="mt-4 italic text-muted">{customFantasiesNote}</p>
       </section>
 
       {/* Fantasy + Children's galleries */}
@@ -92,7 +92,7 @@ export default function ExperiencesPage() {
           <button
             type="button"
             onClick={() => setAdultGalleryOpen((open) => !open)}
-            className="rounded-full border border-[var(--border)] bg-[var(--card)] px-6 py-2 text-[var(--accent)] transition hover:bg-[var(--border)]"
+            className="rounded-full border border-border bg-card px-6 py-2 text-accent transition hover:bg-border"
           >
             {adultGalleryOpen ? "Hide adult gallery" : adultGalleryLabel}
           </button>

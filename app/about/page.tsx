@@ -40,10 +40,10 @@ export default function AboutPage() {
 
       {/* Pre-jester biography */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-[var(--accent)]">
+        <h2 className="font-display text-2xl font-semibold text-accent">
           {preJesterHeading}
         </h2>
-        <div className="mt-4 space-y-4 text-[var(--muted)]">
+        <div className="mt-4 space-y-4 text-muted">
           {preJesterParagraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -52,10 +52,10 @@ export default function AboutPage() {
 
       {/* Becoming Jester Dapper Dan */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-[var(--accent)]">
+        <h2 className="font-display text-2xl font-semibold text-accent">
           {becomingHeading}
         </h2>
-        <div className="mt-4 space-y-4 text-[var(--muted)]">
+        <div className="mt-4 space-y-4 text-muted">
           {becomingParagraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -64,10 +64,10 @@ export default function AboutPage() {
 
       {/* What sets apart */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-[var(--accent)]">
+        <h2 className="font-display text-2xl font-semibold text-accent">
           {whatSetsApartHeading}
         </h2>
-        <ul className="mt-4 list-inside list-disc space-y-2 text-[var(--muted)]">
+        <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
           {whatSetsApartItems.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
@@ -76,10 +76,10 @@ export default function AboutPage() {
 
       {/* Why choose me */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-[var(--accent)]">
+        <h2 className="font-display text-2xl font-semibold text-accent">
           {whyChooseHeading}
         </h2>
-        <ul className="mt-4 list-inside list-disc space-y-2 text-[var(--muted)]">
+        <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
           {whyChooseItems.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
@@ -88,12 +88,12 @@ export default function AboutPage() {
 
       {/* Testimonials ticker */}
       <section aria-label="Testimonials">
-        <div className="overflow-hidden border-y border-[var(--border)] bg-[var(--card)] py-4">
+        <div className="overflow-hidden border-y border-border bg-card py-4">
           <div className="flex w-max gap-16 whitespace-nowrap animate-ticker">
             {[...testimonialQuotes, ...testimonialQuotes].map((quote, i) => (
               <span
                 key={`${quote}-${i}`}
-                className="font-display text-xl italic text-[var(--accent)]"
+                className="font-display text-xl italic text-accent"
               >
                 {quote}
               </span>

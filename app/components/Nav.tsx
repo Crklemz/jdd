@@ -10,13 +10,13 @@ const navLinks = [
 export function Nav() {
   return (
     <nav
-      className="sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur"
+      className="sticky top-0 z-40 border-b border-border bg-(--background)/95 backdrop-blur"
       aria-label="Main"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3">
         <Link
           href="/"
-          className="font-display text-xl font-semibold text-[var(--foreground)] no-underline"
+          className="font-display text-xl font-semibold text-foreground no-underline"
         >
           Jester Dapper Dan
         </Link>
@@ -25,7 +25,7 @@ export function Nav() {
             <li key={href}>
               <Link
                 href={href}
-                className="text-[var(--muted)] transition hover:text-[var(--accent)]"
+                className="text-muted transition hover:text-accent"
               >
                 {label}
               </Link>

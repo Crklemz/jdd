@@ -21,7 +21,7 @@ export function ScrollGallery({
       {imagePaths.map((src, i) => (
         <div
           key={src}
-          className="relative h-64 min-w-[280px] flex-shrink-0 snap-center overflow-hidden rounded-lg"
+          className="relative h-64 min-w-[280px] shrink-0 snap-center overflow-hidden rounded-lg"
           style={{ scrollSnapAlign: "center" }}
         >
           <Image

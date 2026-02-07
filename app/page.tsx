@@ -22,27 +22,27 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="space-y-6 text-center">
-        <p className="text-lg uppercase tracking-widest text-[var(--accent)]">
+        <p className="text-lg uppercase tracking-widest text-accent">
           {hero.tagline}
         </p>
         <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl">
           {hero.invocation}
         </h1>
-        <p className="mx-auto max-w-2xl text-[var(--muted)]">{hero.identity}</p>
-        <p className="font-display text-xl italic text-[var(--accent)]">
+        <p className="mx-auto max-w-2xl text-muted">{hero.identity}</p>
+        <p className="font-display text-xl italic text-accent">
           {hero.energy}
         </p>
       </section>
 
       {/* Skills list - scrolling ticker */}
       <section aria-label="Skills and passions">
-        <p className="mb-2 text-center text-sm uppercase tracking-wider text-[var(--muted)]">
+        <p className="mb-2 text-center text-sm uppercase tracking-wider text-muted">
           Jack of all trades · Trickster jester of many hats
         </p>
-        <div className="overflow-hidden border-y border-[var(--border)] py-4">
+        <div className="overflow-hidden border-y border-border py-4">
           <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
             {[...skillsList, ...skillsList].map((skill, i) => (
-              <span key={`${skill}-${i}`} className="text-lg text-[var(--foreground)]">
+              <span key={`${skill}-${i}`} className="text-lg text-foreground">
                 {skill}
               </span>
             ))}
@@ -56,10 +56,10 @@ export default function HomePage() {
           Book me to bring my signature electrifying energy, exuberant whimsy &
           next-level excitement to transform your event:
         </p>
-        <div className="overflow-hidden border-y border-[var(--border)] py-4">
+        <div className="overflow-hidden border-y border-border py-4">
           <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
             {[...eventTypesList, ...eventTypesList].map((event, i) => (
-              <span key={`${event}-${i}`} className="text-[var(--muted)]">
+              <span key={`${event}-${i}`} className="text-muted">
                 ({event})
               </span>
             ))}
@@ -69,12 +69,12 @@ export default function HomePage() {
 
       {/* Reviews ticker */}
       <section aria-label="Reviews">
-        <div className="overflow-hidden border-y border-[var(--border)] bg-[var(--card)] py-4">
+        <div className="overflow-hidden border-y border-border bg-card py-4">
           <div className="flex w-max gap-16 whitespace-nowrap animate-ticker">
             {[...reviewQuotes, ...reviewQuotes].map((quote, i) => (
               <span
                 key={`${quote}-${i}`}
-                className="font-display text-xl italic text-[var(--accent)]"
+                className="font-display text-xl italic text-accent"
               >
                 {quote}
               </span>

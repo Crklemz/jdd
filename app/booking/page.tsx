@@ -13,7 +13,7 @@ export default function BookingPage() {
         <h1 className="font-display text-4xl font-bold md:text-5xl">
           {heading}
         </h1>
-        <div className="mx-auto mt-4 max-w-2xl space-y-2 text-[var(--muted)]">
+        <div className="mx-auto mt-4 max-w-2xl space-y-2 text-muted">
           {introParagraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -30,10 +30,10 @@ export default function BookingPage() {
             className="h-[800px] w-full overflow-hidden rounded-xl border-0"
           />
         ) : (
-          <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-8 text-center">
-            <p className="text-[var(--muted)]">
-              Set <code className="rounded bg-[var(--background)] px-1.5 py-0.5">TALLY_FORM_URL</code> in
-              your <code className="rounded bg-[var(--background)] px-1.5 py-0.5">.env.local</code> to
+          <div className="rounded-xl border border-border bg-card p-8 text-center">
+            <p className="text-muted">
+              Set <code className="rounded bg-background px-1.5 py-0.5">TALLY_FORM_URL</code> in
+              your <code className="rounded bg-background px-1.5 py-0.5">.env.local</code> to
               show the booking form.
             </p>
           </div>
@@ -42,10 +42,10 @@ export default function BookingPage() {
 
       {/* Workflow */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-[var(--accent)]">
+        <h2 className="font-display text-2xl font-semibold text-accent">
           What to expect
         </h2>
-        <ol className="mt-4 list-inside list-decimal space-y-2 text-[var(--muted)]">
+        <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
           {workflowSteps.map((step, i) => (
             <li key={i}>{step}</li>
           ))}
