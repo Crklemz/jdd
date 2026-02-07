@@ -71,8 +71,11 @@ export default function HomePage() {
           </div>
         </div>
         <div className="mx-auto space-y-8 px-4 text-center">
+          <p className="mx-auto max-w-4xl font-display text-2xl italic text-accent md:text-3xl">
+            {hero.energy1}
+          </p>
           <p className="mx-auto max-w-2xl font-display text-2xl italic text-accent md:text-3xl">
-            {hero.energy}
+            {hero.energy2}
           </p>
         </div>
       </section>

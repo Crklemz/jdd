@@ -8,7 +8,8 @@ export interface HomeContent {
     tagline: string;
     invocation: string;
     identity: string;
-    energy: string;
+    energy1: string;
+    energy2: string;
   };
   skillsHeading: string;
   skillsList: string[];

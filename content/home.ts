@@ -7,8 +7,10 @@ export const homeContent: HomeContent = {
       "Step inside my realm of magic & mischief! I am Jester Dapper Dan – chic, whimsical, effervescent™",
     identity:
       "I am a fantasy court jester of the 21st century with a Ph.D. I bring incomparable elegance, inimitable wit and insuperable enthusiasm everywhere I go.",
-    energy:
-      "I don't perform. I don't party. I don't do industry standard. I upgrade rooms. I celebrate. I bring aliveness.",
+    energy1:
+      "I don't perform. I don't party. I don't do industry standard.",
+    energy2:
+      "I upgrade rooms. I celebrate. I bring aliveness.",
   },
   skillsHeading: "I am a jack of all trades and trickster jester of many hats, skills & passions:",
   skillsList: [
