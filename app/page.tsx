@@ -43,8 +43,19 @@ export default function HomePage() {
           <h1 className="font-display text-4xl font-bold leading-tight text-foreground md:text-5xl">
             {hero.invocation}
           </h1>
-          <p className="text-muted">{hero.identity}</p>
-          <p className="font-display text-xl italic text-accent">{hero.energy}</p>
+        </div>
+      </section>
+
+      {/* Identity & energy: solid background */}
+      <section
+        aria-label="About"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-card py-16"
+      >
+        <div className="mx-auto max-w-2xl space-y-8 px-4 text-center">
+          <p className="text-lg text-muted">{hero.identity}</p>
+          <p className="font-display text-2xl italic text-accent md:text-3xl">
+            {hero.energy}
+          </p>
         </div>
       </section>
 
@@ -132,24 +143,6 @@ export default function HomePage() {
               </span>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Image above text */}
-      <section className="mx-4 mt-16 overflow-hidden rounded-xl border border-border md:mx-0">
-        <div className="relative aspect-4/3 md:aspect-21/9">
-          <Image
-            src={`${LANDING}/5.jpg`}
-            alt={sectionImageAlts.energy}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 1024px"
-          />
-        </div>
-        <div className="bg-card px-6 py-8 text-center md:px-12 md:py-10">
-          <p className="font-display text-2xl text-foreground md:text-3xl">
-            {hero.energy}
-          </p>
         </div>
       </section>
 
