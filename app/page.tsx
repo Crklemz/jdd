@@ -55,6 +55,22 @@ export default function HomePage() {
           <p className="mx-auto max-w-4xl font-display text-2xl leading-snug text-foreground md:text-3xl">
             {hero.identity}
           </p>
+        </div>
+        <div className="flex flex-col justify-center  gap-4 bg-card p-6 md:p-8">
+          <p className="text-sm text-center uppercase tracking-wider text-muted">
+            {skillsHeading}
+          </p>
+          <div className="overflow-hidden border-y border-border py-3">
+            <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+              {[...skillsList, ...skillsList].map((skill, i) => (
+                <span key={`${skill}-${i}`} className="text-lg text-foreground">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto space-y-8 px-4 text-center">
           <p className="mx-auto max-w-2xl font-display text-2xl italic text-accent md:text-3xl">
             {hero.energy}
           </p>
@@ -75,20 +91,7 @@ export default function HomePage() {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-        <div className="flex flex-col justify-center gap-4 bg-card p-6 md:p-8">
-          <p className="text-sm uppercase tracking-wider text-muted">
-            {skillsHeading}
-          </p>
-          <div className="overflow-hidden border-y border-border py-3">
-            <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
-              {[...skillsList, ...skillsList].map((skill, i) => (
-                <span key={`${skill}-${i}`} className="text-lg text-foreground">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+
       </section>
 
       {/* Event types: text left, image right */}

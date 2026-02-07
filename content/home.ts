@@ -10,7 +10,7 @@ export const homeContent: HomeContent = {
     energy:
       "I don't perform. I don't party. I don't do industry standard. I upgrade rooms. I celebrate. I bring aliveness.",
   },
-  skillsHeading: "Jack of all trades · Trickster jester of many hats",
+  skillsHeading: "I am a jack of all trades and trickster jester of many hats, skills & passions:",
   skillsList: [
     "Trickster Comedian",
     "Captivating MC",
