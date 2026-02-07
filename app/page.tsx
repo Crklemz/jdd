@@ -1,12 +1,26 @@
+import Image from "next/image";
 import { homeContent } from "@/content";
 import { ScrollGallery } from "./components/ScrollGallery";
 
+const LANDING = "/landing-images";
+
 export default function HomePage() {
-  const { hero, skillsList, eventTypesList, reviewQuotes, landingImagePaths, signatureVideoPath } =
-    homeContent;
+  const {
+    hero,
+    skillsHeading,
+    skillsList,
+    eventTypesIntro,
+    eventTypesList,
+    reviewQuotes,
+    landingImagePaths,
+    signatureVideoPath,
+    videoAriaLabel,
+    galleryAltPrefix,
+    sectionImageAlts,
+  } = homeContent;
 
   return (
-    <div className="space-y-16 py-8">
+    <div className="space-y-0 py-8">
       {/* Video */}
       <section className="overflow-hidden rounded-xl">
         <video
@@ -16,60 +30,110 @@ export default function HomePage() {
           loop
           playsInline
           className="h-auto w-full object-cover"
-          aria-label="Jester Dapper Dan signature video"
+          aria-label={videoAriaLabel}
         />
       </section>
 
-      {/* Hero */}
-      <section className="space-y-6 text-center">
-        <p className="text-lg uppercase tracking-widest text-accent">
-          {hero.tagline}
-        </p>
-        <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl">
-          {hero.invocation}
-        </h1>
-        <p className="mx-auto max-w-2xl text-muted">{hero.identity}</p>
-        <p className="font-display text-xl italic text-accent">
-          {hero.energy}
-        </p>
+      {/* Hero with background image */}
+      <section
+        aria-label="Introduction"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[70vh] w-screen items-center justify-center overflow-hidden"
+      >
+        <Image
+          src={`${LANDING}/1.jpg`}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-background/80" aria-hidden />
+        <div className="relative z-10 mx-4 max-w-2xl space-y-6 text-center">
+          <p className="text-lg uppercase tracking-widest text-accent">
+            {hero.tagline}
+          </p>
+          <h1 className="font-display text-4xl font-bold leading-tight text-foreground md:text-5xl">
+            {hero.invocation}
+          </h1>
+          <p className="text-muted">{hero.identity}</p>
+          <p className="font-display text-xl italic text-accent">{hero.energy}</p>
+        </div>
       </section>
 
-      {/* Skills list - scrolling ticker */}
-      <section aria-label="Skills and passions">
-        <p className="mb-2 text-center text-sm uppercase tracking-wider text-muted">
-          Jack of all trades · Trickster jester of many hats
-        </p>
-        <div className="overflow-hidden border-y border-border py-4">
-          <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
-            {[...skillsList, ...skillsList].map((skill, i) => (
-              <span key={`${skill}-${i}`} className="text-lg text-foreground">
-                {skill}
-              </span>
-            ))}
+      {/* Skills: image left, ticker right */}
+      <section
+        aria-label="Skills and passions"
+        className="mt-16 grid min-h-[320px] grid-cols-1 overflow-hidden rounded-xl border border-border md:grid-cols-2"
+      >
+        <div className="relative min-h-[240px] md:min-h-0">
+          <Image
+            src={`${LANDING}/2.jpg`}
+            alt={sectionImageAlts.skills}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+        <div className="flex flex-col justify-center gap-4 bg-card p-6 md:p-8">
+          <p className="text-sm uppercase tracking-wider text-muted">
+            {skillsHeading}
+          </p>
+          <div className="overflow-hidden border-y border-border py-3">
+            <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+              {[...skillsList, ...skillsList].map((skill, i) => (
+                <span key={`${skill}-${i}`} className="text-lg text-foreground">
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Event types - scrolling ticker */}
-      <section className="text-center">
-        <p className="mb-4 font-display text-2xl">
-          Book me to bring my signature electrifying energy, exuberant whimsy &
-          next-level excitement to transform your event:
-        </p>
-        <div className="overflow-hidden border-y border-border py-4">
-          <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
-            {[...eventTypesList, ...eventTypesList].map((event, i) => (
-              <span key={`${event}-${i}`} className="text-muted">
-                ({event})
-              </span>
-            ))}
+      {/* Event types: text left, image right */}
+      <section
+        aria-label="Event types"
+        className="mt-16 grid min-h-[320px] grid-cols-1 overflow-hidden rounded-xl border border-border md:grid-cols-2"
+      >
+        <div className="flex flex-col justify-center gap-4 bg-card p-6 md:order-2 md:p-8">
+          <p className="font-display text-2xl text-foreground">
+            {eventTypesIntro}
+          </p>
+          <div className="overflow-hidden border-y border-border py-3">
+            <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
+              {[...eventTypesList, ...eventTypesList].map((event, i) => (
+                <span key={`${event}-${i}`} className="text-muted">
+                  ({event})
+                </span>
+              ))}
+            </div>
           </div>
+        </div>
+        <div className="relative min-h-[240px] md:order-1 md:min-h-0">
+          <Image
+            src={`${LANDING}/3.jpg`}
+            alt={sectionImageAlts.eventTypes}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </section>
 
-      {/* Reviews ticker */}
-      <section aria-label="Reviews">
-        <div className="overflow-hidden border-y border-border bg-card py-4">
+      {/* Reviews: full-width background image with overlay */}
+      <section
+        aria-label="Reviews"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[200px] w-screen items-center overflow-hidden"
+      >
+        <Image
+          src={`${LANDING}/4.jpeg`}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-background/75" aria-hidden />
+        <div className="relative z-10 w-full overflow-hidden border-y border-border/50 py-6">
           <div className="flex w-max gap-16 whitespace-nowrap animate-ticker">
             {[...reviewQuotes, ...reviewQuotes].map((quote, i) => (
               <span
@@ -83,16 +147,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Image above text */}
+      <section className="mx-4 mt-16 overflow-hidden rounded-xl border border-border md:mx-0">
+        <div className="relative aspect-4/3 md:aspect-21/9">
+          <Image
+            src={`${LANDING}/5.jpg`}
+            alt={sectionImageAlts.energy}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 1024px"
+          />
+        </div>
+        <div className="bg-card px-6 py-8 text-center md:px-12 md:py-10">
+          <p className="font-display text-2xl text-foreground md:text-3xl">
+            {hero.energy}
+          </p>
+        </div>
+      </section>
+
       {/* Two scrolling galleries */}
-      <section aria-label="Gallery">
+      <section aria-label="Gallery" className="mt-16">
         <ScrollGallery
           imagePaths={landingImagePaths.slice(0, 6)}
-          altPrefix="Jester Dapper Dan"
+          altPrefix={galleryAltPrefix}
           className="mb-4"
         />
         <ScrollGallery
           imagePaths={landingImagePaths.slice(6, 11)}
-          altPrefix="Jester Dapper Dan"
+          altPrefix={galleryAltPrefix}
         />
       </section>
     </div>

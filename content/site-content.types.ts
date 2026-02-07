@@ -10,13 +10,23 @@ export interface HomeContent {
     identity: string;
     energy: string;
   };
+  skillsHeading: string;
   skillsList: string[];
+  eventTypesIntro: string;
   eventTypesList: string[];
   ctaButtonLabel: string;
   ctaButtonHref: string;
   reviewQuotes: string[];
   landingImagePaths: string[];
   signatureVideoPath: string;
+  videoAriaLabel: string;
+  galleryAltPrefix: string;
+  /** Alt text for decorative section images (skills, event types, energy block). */
+  sectionImageAlts: {
+    skills: string;
+    eventTypes: string;
+    energy: string;
+  };
 }
 
 export interface AboutContent {

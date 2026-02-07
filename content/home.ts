@@ -10,6 +10,7 @@ export const homeContent: HomeContent = {
     energy:
       "I don't perform. I don't party. I don't do industry standard. I upgrade rooms. I celebrate. I bring aliveness.",
   },
+  skillsHeading: "Jack of all trades · Trickster jester of many hats",
   skillsList: [
     "Trickster Comedian",
     "Captivating MC",
@@ -24,6 +25,8 @@ export const homeContent: HomeContent = {
     "Martial Artist",
     "Psychedelic Artist",
   ],
+  eventTypesIntro:
+    "Book me to bring my signature electrifying energy, exuberant whimsy & next-level excitement to transform your event:",
   eventTypesList: [
     "intimate gatherings",
     "big stages",
@@ -58,4 +61,11 @@ export const homeContent: HomeContent = {
     "/landing-images/11.jpg",
   ],
   signatureVideoPath: "/OSS3.mp4",
+  videoAriaLabel: "Jester Dapper Dan signature video",
+  galleryAltPrefix: "Jester Dapper Dan",
+  sectionImageAlts: {
+    skills: "Jester Dapper Dan in character",
+    eventTypes: "Jester Dapper Dan performing",
+    energy: "Jester Dapper Dan bringing magic to events",
+  },
 };
