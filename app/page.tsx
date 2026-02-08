@@ -104,11 +104,28 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <div className="overflow-hidden border-y border-border py-3">
-          <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
+      </section>
+
+      <section
+        aria-label="Reviews"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[200px] w-screen items-center overflow-hidden"
+      >
+        <Image
+          src={`${LANDING}/lights-strip.jpeg`}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-background/75" aria-hidden />
+        <div className="relative z-10 w-full overflow-hidden border-y border-b-accent border-t-accent border-border/50 py-6">
+          <div className="flex w-max gap-16 whitespace-nowrap animate-ticker">
             {[...eventTypesList, ...eventTypesList].map((event, i) => (
-              <span key={`${event}-${i}`} className="text-muted">
-                ({event})
+              <span
+                key={`${event}-${i}`}
+                className="font-display text-xl italic text-accent"
+              >
+                {event}
               </span>
             ))}
           </div>
