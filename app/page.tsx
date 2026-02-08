@@ -60,32 +60,34 @@ export default function HomePage() {
         aria-label="About"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-card py-16"
       >
-        <div className="mx-auto space-y-8 px-4 text-center">
-          <p className="mx-auto max-w-4xl font-display text-2xl leading-snug text-foreground md:text-3xl">
-            {hero.identity}
-          </p>
-        </div>
-        <div className="flex flex-col justify-center  gap-4 bg-card p-6 md:p-8">
-          <p className="text-sm text-center uppercase tracking-wider text-muted">
-            {skillsHeading}
-          </p>
-          <div className="ticker-strip overflow-hidden border-y border-border py-6">
-            <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
-              {[...skillsList, ...skillsList].map((skill, i) => (
-                <span key={`${skill}-${i}`} className="text-lg text-foreground">
-                  {skill}
-                </span>
-              ))}
+        <div className="mx-auto flex flex-col gap-16 px-4">
+          <div className="space-y-8 text-center">
+            <p className="mx-auto max-w-4xl font-display text-2xl leading-snug text-foreground md:text-3xl">
+              {hero.identity}
+            </p>
+          </div>
+          <div className="flex flex-col justify-center gap-4 bg-card p-6 md:p-8">
+            <p className="text-center text-sm uppercase tracking-wider text-muted">
+              {skillsHeading}
+            </p>
+            <div className="ticker-strip overflow-hidden border-y border-border py-6">
+              <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+                {[...skillsList, ...skillsList].map((skill, i) => (
+                  <span key={`${skill}-${i}`} className="text-lg text-foreground">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mx-auto space-y-8 px-4 text-center">
-          <p className="mx-auto max-w-4xl font-display text-2xl italic text-accent md:text-3xl">
-            <span className="fancy-underline">{hero.energy1}</span>
-          </p>
-          <p className="mx-auto max-w-2xl font-display text-2xl italic text-accent md:text-3xl">
-            <span className="fancy-underline">{hero.energy2}</span>
-          </p>
+          <div className="space-y-10 text-center">
+            <p className="mx-auto max-w-4xl font-display text-2xl italic text-accent md:text-3xl">
+              <span className="fancy-underline">{hero.energy1}</span>
+            </p>
+            <p className="mx-auto max-w-2xl font-display text-2xl italic text-accent md:text-3xl">
+              <span className="fancy-underline">{hero.energy2}</span>
+            </p>
+          </div>
         </div>
       </section>
 
