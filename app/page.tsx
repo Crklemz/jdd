@@ -95,7 +95,7 @@ export default function HomePage() {
             className="w-px shrink-0 bg-border"
             aria-hidden
           />
-          <div className="w-1/2 shrink-0">
+          <div className="image-radial-fade w-1/2 shrink-0 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${LANDING}/1.jpg`}
