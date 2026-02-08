@@ -95,48 +95,36 @@ export default function HomePage() {
         className="mt-16 flex flex-col overflow-hidden"
       >
         <div className="flex w-full items-stretch gap-0 p-6 md:p-8">
-          <div className="flex w-1/2 min-w-0 flex-col justify-center pr-6 md:pr-8">
-            <p className="font-display text-2xl text-foreground md:text-3xl">
-              {eventTypesIntro}
-            </p>
+          <div className="flex w-3/5 min-w-0 flex-col pr-6 md:pr-8">
+            <div className="flex flex-1 flex-col items-center justify-center">
+              <p className="font-display text-2xl text-foreground md:text-3xl text-center">
+                {eventTypesIntro}
+              </p>
+            </div>
+            <div className="relative z-10 mt-auto w-full overflow-hidden border-y border-b-accent border-t-accent border-border/50 py-6">
+              <div className="flex w-max gap-10 whitespace-nowrap animate-ticker">
+                {[...eventTypesList, ...eventTypesList].map((event, i) => (
+                  <span
+                  key={`${event}-${i}`}
+                  className="font-display text-xl italic text-accent"
+                  >
+                    {event}
+                 </span>
+               ))}
+              </div>
+            </div>
           </div>
           <div
             className="w-px shrink-0 bg-border"
             aria-hidden
           />
-          <div className="image-radial-fade w-1/2 shrink-0 overflow-hidden">
+          <div className="image-radial-fade w-2/5 shrink-0 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${LANDING}/1.jpg`}
               alt={sectionImageAlts.eventTypes}
               className="h-auto w-full object-contain"
             />
-          </div>
-        </div>
-      </section>
-
-      <section
-        aria-label="Reviews"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[200px] w-screen items-center overflow-hidden"
-      >
-        <Image
-          src={`${LANDING}/lights-strip.jpeg`}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-background/75" aria-hidden />
-        <div className="relative z-10 w-full overflow-hidden border-y border-b-accent border-t-accent border-border/50 py-6">
-          <div className="flex w-max gap-16 whitespace-nowrap animate-ticker">
-            {[...eventTypesList, ...eventTypesList].map((event, i) => (
-              <span
-                key={`${event}-${i}`}
-                className="font-display text-xl italic text-accent"
-              >
-                {event}
-              </span>
-            ))}
           </div>
         </div>
       </section>
