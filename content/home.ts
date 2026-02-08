@@ -28,7 +28,7 @@ export const homeContent: HomeContent = {
     "Psychedelic Artist",
   ],
   eventTypesIntro:
-    "Book me to bring my signature electrifying energy, exuberant whimsy & next-level excitement to transform your event:",
+    "Book me to bring my signature electrifying energy, exuberant whimsy & next-level excitement to transform your event",
   eventTypesList: [
     "intimate gatherings",
     "big stages",
