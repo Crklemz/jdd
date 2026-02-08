@@ -83,12 +83,26 @@ export default function HomePage() {
       {/* Event types */}
       <section
         aria-label="Event types"
-        className="mt-16 flex min-h-[320px] flex-col overflow-hidden"
+        className="mt-16 flex flex-col overflow-hidden"
       >
-        <div className="flex flex-col justify-center p-6 md:p-8">
-          <p className="font-display pb-6 text-center text-2xl text-foreground">
-            {eventTypesIntro}
-          </p>
+        <div className="flex w-full items-stretch gap-0 p-6 md:p-8">
+          <div className="flex w-1/2 min-w-0 flex-col justify-center pr-6 md:pr-8">
+            <p className="font-display text-2xl text-foreground md:text-3xl">
+              {eventTypesIntro}
+            </p>
+          </div>
+          <div
+            className="w-px shrink-0 bg-border"
+            aria-hidden
+          />
+          <div className="w-1/2 shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${LANDING}/1.jpg`}
+              alt={sectionImageAlts.eventTypes}
+              className="h-auto w-full object-contain"
+            />
+          </div>
         </div>
         <div className="overflow-hidden border-y border-border py-3">
           <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
