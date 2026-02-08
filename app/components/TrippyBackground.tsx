@@ -7,7 +7,7 @@
 export function TrippyBackground() {
   return (
     <div
-      className="trippy-bg absolute inset-0"
+      className="trippy-bg absolute inset-0 fade-bottom"
       aria-hidden
     />
   );

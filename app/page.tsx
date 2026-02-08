@@ -137,26 +137,26 @@ export default function HomePage() {
       {/* Reviews: trippy animated background with rotating quote (matches gallery section width) */}
       <section
         aria-label="Reviews"
-        className="reviews-fade-bottom relative mt-26 flex min-h-[120px] w-full items-center overflow-hidden rounded-t-lg"
+        className=" relative mt-26 flex min-h-[120px] w-full items-center overflow-hidden rounded-t-lg"
       >
         <TrippyBackground />
-        <div className="absolute inset-0 bg-background/70" aria-hidden />
-        <div className="relative z-10 w-full">
-          <RotatingQuote quotes={reviewQuotes} />
+        <div className="absolute inset-0 bg-background/60" aria-hidden />
+          <div className="relative z-10 w-full px-4 md:px-6">
+            <div className="flex justify-center">
+              <RotatingQuote quotes={reviewQuotes} />
+            </div>
+            <div aria-label="Gallery" className="-mt-6">
+            <ScrollGallery
+              imagePaths={landingImagePaths.slice(0, 6)}
+              altPrefix={galleryAltPrefix}
+              className="mb-4"
+            />
+            <ScrollGallery
+              imagePaths={landingImagePaths.slice(6, 11)}
+              altPrefix={galleryAltPrefix}
+            />
+          </div>
         </div>
-      </section>
-
-      {/* Two scrolling galleries */}
-      <section aria-label="Gallery" className="-mt-6">
-        <ScrollGallery
-          imagePaths={landingImagePaths.slice(0, 6)}
-          altPrefix={galleryAltPrefix}
-          className="mb-4"
-        />
-        <ScrollGallery
-          imagePaths={landingImagePaths.slice(6, 11)}
-          altPrefix={galleryAltPrefix}
-        />
       </section>
     </div>
   );

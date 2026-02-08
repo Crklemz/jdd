@@ -244,7 +244,7 @@ body {
 }
 
 /* Reviews section: fade to transparent at bottom so section below shows through */
-.reviews-fade-bottom {
+.fade-bottom {
   -webkit-mask-image: linear-gradient(
     to bottom,
     black 0%,
