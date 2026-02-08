@@ -38,7 +38,14 @@ export default function HomePage() {
           aria-label={videoAriaLabel}
         />
         <div className="absolute inset-0 bg-background/80" aria-hidden />
-        <div className="relative z-10 mx-4 max-w-2xl space-y-6 text-center">
+        <div className="relative z-10 mx-4 -mt-12 max-w-2xl space-y-6 text-center md:-mt-16">
+          <Image
+            src="/about-images/Jester Signature.png"
+            alt=""
+            width={260}
+            height={104}
+            className="mx-auto mb-8 h-24 w-auto object-contain md:h-28 md:mb-10"
+          />
           <p className="text-lg uppercase tracking-widest text-accent">
             {hero.tagline}
           </p>
