@@ -126,12 +126,12 @@ body {
 /* Radial fade: center opaque, edges transparent. Apply to wrapper of the image. */
 .image-radial-fade {
   -webkit-mask-image: radial-gradient(
-    ellipse 65% 65% at 50% 50%,
+    ellipse 75% 75% at 50% 50%,
     black 15%,
     transparent 65%
   );
   mask-image: radial-gradient(
-    ellipse 65% 65% at 50% 50%,
+    ellipse 75% 75% at 50% 50%,
     black 15%,
     transparent 65%
   );
