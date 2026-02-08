@@ -2,6 +2,7 @@ import Image from "next/image";
 import { homeContent } from "@/content";
 import { RotatingQuote } from "./components/RotatingQuote";
 import { ScrollGallery } from "./components/ScrollGallery";
+import { TrippyBackground } from "./components/TrippyBackground";
 
 const LANDING = "/landing-images";
 
@@ -133,26 +134,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Reviews: full-width background with single rotating quote */}
+      {/* Reviews: trippy animated background with rotating quote (matches gallery section width) */}
       <section
         aria-label="Reviews"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[220px] w-screen items-center overflow-hidden"
+        className="reviews-fade-bottom relative mt-26 flex min-h-[120px] w-full items-center overflow-hidden rounded-t-lg"
       >
-        <Image
-          src={`${LANDING}/4.jpeg`}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-background/75" aria-hidden />
-        <div className="relative z-10 w-full border-y border-border/50">
+        <TrippyBackground />
+        <div className="absolute inset-0 bg-background/70" aria-hidden />
+        <div className="relative z-10 w-full">
           <RotatingQuote quotes={reviewQuotes} />
         </div>
       </section>
 
       {/* Two scrolling galleries */}
-      <section aria-label="Gallery" className="mt-16">
+      <section aria-label="Gallery" className="-mt-6">
         <ScrollGallery
           imagePaths={landingImagePaths.slice(0, 6)}
           altPrefix={galleryAltPrefix}

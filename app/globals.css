@@ -151,3 +151,110 @@ body {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+
+/* Trippy animated background: morphing gradients in theme colors */
+@keyframes trippy-blob-1 {
+  0%,
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 0%, 50% 100%;
+  }
+  25% {
+    background-position: 100% 0%, 0% 100%, 0% 50%, 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%, 50% 100%, 50% 0%;
+  }
+  75% {
+    background-position: 0% 100%, 100% 0%, 100% 50%, 0% 50%;
+  }
+}
+
+@keyframes trippy-conic {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.trippy-bg {
+  --trippy-accent: rgba(212, 168, 75, 0.35);
+  --trippy-muted: rgba(139, 130, 153, 0.4);
+  --trippy-accent-soft: rgba(212, 168, 75, 0.15);
+  --trippy-purple: rgba(90, 65, 110, 0.35);
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 20% 30%,
+      var(--trippy-accent),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 70% 80% at 80% 70%,
+      var(--trippy-muted),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 70% at 50% 50%,
+      var(--trippy-purple),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 90% 50% at 70% 20%,
+      var(--trippy-accent-soft),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse 50% 90% at 10% 80%,
+      var(--trippy-muted),
+      transparent 50%
+    );
+  background-size: 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%;
+  background-position: 0% 50%, 100% 50%, 50% 50%, 100% 0%, 0% 100%;
+  animation: trippy-blob-1 18s ease-in-out infinite;
+}
+
+.trippy-bg::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    var(--trippy-accent-soft) 60deg,
+    transparent 120deg,
+    var(--trippy-muted) 180deg,
+    transparent 240deg,
+    var(--trippy-accent-soft) 300deg
+  );
+  animation: trippy-conic 25s linear infinite;
+  opacity: 0.5;
+}
+
+.trippy-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 120% 120% at 50% 50%,
+    transparent 30%,
+    var(--background) 85%
+  );
+  pointer-events: none;
+}
+
+/* Reviews section: fade to transparent at bottom so section below shows through */
+.reviews-fade-bottom {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 55%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 55%,
+    transparent 100%
+  );
+}
