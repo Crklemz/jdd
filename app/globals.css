@@ -108,6 +108,30 @@ body {
   display: none;
 }
 
+/* Fancy underline for hero energy lines: padding reserves gap, ::after draws line below it */
+.fancy-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5em;
+}
+.fancy-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.12em;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--accent) 15%,
+    var(--accent) 85%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
 /* Radial fade: center opaque, edges transparent. Apply to wrapper of the image. */
 .image-radial-fade {
   -webkit-mask-image: radial-gradient(
