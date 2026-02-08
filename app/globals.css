@@ -99,15 +99,6 @@ body {
   }
 }
 
-/* Horizontal scroll gallery - no scrollbar */
-.scroll-gallery {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.scroll-gallery::-webkit-scrollbar {
-  display: none;
-}
-
 /* Fancy underline for hero energy lines: padding reserves gap, ::after draws line below it */
 .fancy-underline {
   position: relative;
