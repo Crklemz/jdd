@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { homeContent } from "@/content";
+import { RotatingQuote } from "./components/RotatingQuote";
 import { ScrollGallery } from "./components/ScrollGallery";
 
 const LANDING = "/landing-images";
@@ -132,10 +133,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Reviews: full-width background image with overlay */}
+      {/* Reviews: full-width background with single rotating quote */}
       <section
         aria-label="Reviews"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[200px] w-screen items-center overflow-hidden"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16 flex min-h-[220px] w-screen items-center overflow-hidden"
       >
         <Image
           src={`${LANDING}/4.jpeg`}
@@ -145,17 +146,8 @@ export default function HomePage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-background/75" aria-hidden />
-        <div className="relative z-10 w-full overflow-hidden border-y border-border/50 py-6">
-          <div className="flex w-max gap-16 whitespace-nowrap animate-ticker">
-            {[...reviewQuotes, ...reviewQuotes].map((quote, i) => (
-              <span
-                key={`${quote}-${i}`}
-                className="font-display text-xl italic text-accent"
-              >
-                {quote}
-              </span>
-            ))}
-          </div>
+        <div className="relative z-10 w-full border-y border-border/50">
+          <RotatingQuote quotes={reviewQuotes} />
         </div>
       </section>
 
