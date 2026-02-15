@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { homeContent } from "@/content";
 import { HeroVideo } from "./components/HeroVideo";
-import { NeonBackground } from "./components/NeonBackground";
 import { RotatingQuote } from "./components/RotatingQuote";
 import { ScrapbookSection } from "./components/ScrapbookSection";
 import { ScrollGallery } from "./components/ScrollGallery";
@@ -27,8 +26,7 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen space-y-0 py-8">
-      <NeonBackground />
-      <div className="relative z-10">
+      <div className="relative">
       {/* Hero content: tagline & invocation below the video */}
       <section
         aria-label="Tagline"

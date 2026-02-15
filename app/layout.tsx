@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { Nav } from "./components/Nav";
+import { NeonBackground } from "./components/NeonBackground";
 import { StickyCta } from "./components/StickyCta";
 import "./globals.css";
 
@@ -37,9 +38,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
     >
       <body className="min-h-screen antialiased">
+        <NeonBackground />
         <Nav />
         <StickyCta />
-        <main className="mx-auto max-w-6xl px-4 pb-24">{children}</main>
+        <main className="relative z-10 mx-auto max-w-6xl px-4 pb-24">{children}</main>
       </body>
     </html>
   );
