@@ -49,10 +49,10 @@ export default function HomePage() {
             height={104}
             className="mx-auto mb-8 h-24 w-auto object-contain md:h-28 md:mb-10"
           />
-          <p className="text-lg uppercase tracking-widest text-accent">
+          <p className="text-lg uppercase tracking-widest neon-text-pink text-shadow-neon-pink">
             {hero.tagline}
           </p>
-          <h1 className="font-display text-4xl font-bold leading-tight text-foreground md:text-5xl">
+          <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl neon-text-blue text-shadow-neon-blue">
             {hero.invocation}
           </h1>
         </div>
@@ -70,7 +70,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex flex-col justify-center gap-4 bg-card p-6 md:p-8">
-            <p className="text-center text-sm uppercase tracking-wider text-muted">
+            <p className="text-center text-xl uppercase tracking-wider neon-text-purple text-shadow-neon-purple md:text-2xl">
               {skillsHeading}
             </p>
             <div className="ticker-strip overflow-hidden border-y border-border py-6">
@@ -84,11 +84,11 @@ export default function HomePage() {
             </div>
           </div>
           <div className="space-y-10 text-center">
-            <p className="mx-auto max-w-4xl font-display text-2xl italic text-accent md:text-3xl">
-              <span className="fancy-underline">{hero.energy1}</span>
+            <p className="mx-auto max-w-4xl font-display text-2xl italic md:text-3xl neon-text-pink text-shadow-neon-pink">
+              <span className="fancy-underline fancy-underline-neon-rainbow">{hero.energy1}</span>
             </p>
-            <p className="mx-auto max-w-2xl font-display text-2xl italic text-accent md:text-3xl">
-              <span className="fancy-underline">{hero.energy2}</span>
+            <p className="mx-auto max-w-2xl font-display text-2xl italic md:text-3xl neon-text-blue text-shadow-neon-blue">
+              <span className="fancy-underline fancy-underline-neon-rainbow">{hero.energy2}</span>
             </p>
           </div>
         </div>
