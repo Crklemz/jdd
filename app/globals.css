@@ -336,6 +336,22 @@ body {
   animation: cta-neon-glow 2.5s ease-in-out infinite;
 }
 
+@keyframes hero-video-glow-purple {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(191, 0, 255, 0.7), 0 0 16px rgba(170, 0, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(191, 0, 255, 0.9), 0 0 28px rgba(180, 0, 255, 0.5);
+  }
+}
+
+.hero-video-neon-frame-purple {
+  border: 2px solid #bf00ff;
+  box-shadow: 0 0 8px rgba(191, 0, 255, 0.7), 0 0 16px rgba(170, 0, 255, 0.4);
+  animation: hero-video-glow-purple 2.5s ease-in-out infinite;
+}
+
 .cta-rainbow-pulsate-text {
   background: linear-gradient(
     90deg,

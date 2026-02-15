@@ -6,17 +6,22 @@ interface HeroVideoProps {
   src: string;
   ariaLabel: string;
   className?: string;
+  /** "purple" for about page; default is blue */
+  frameVariant?: "default" | "purple";
 }
 
-export function HeroVideo({ src, ariaLabel, className = "" }: HeroVideoProps) {
+export function HeroVideo({ src, ariaLabel, className = "", frameVariant = "default" }: HeroVideoProps) {
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleMute = () => {
     setIsMuted((prev) => !prev);
   };
 
+  const frameClass =
+    frameVariant === "purple" ? "hero-video-neon-frame-purple" : "hero-video-neon-frame";
+
   return (
-    <div className="hero-video-neon-frame absolute inset-0 overflow-hidden rounded-lg">
+    <div className={`${frameClass} absolute inset-0 overflow-hidden rounded-lg`}>
       <video
         src={src}
         autoPlay

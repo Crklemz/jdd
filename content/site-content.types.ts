@@ -45,6 +45,8 @@ export interface AboutContent {
   aboutImagePaths: string[];
   signatureVideoPath: string;
   videoAriaLabel: string;
+  /** e.g. "16/9" — frame hugs video with no letterboxing when matched to actual video ratio */
+  videoAspectRatio: string;
   galleryAltPrefix: string;
   ctaButtonLabel: string;
   ctaButtonHref: string;

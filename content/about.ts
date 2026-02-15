@@ -46,6 +46,7 @@ export const aboutContent: AboutContent = {
   ],
   signatureVideoPath: "/jddintro.mp4",
   videoAriaLabel: "Jester Dapper Dan signature introduction",
+  videoAspectRatio: "16/9",
   galleryAltPrefix: "About Jester Dapper Dan",
   ctaButtonLabel: "Bring Jester Dapper Dan to your event!",
   ctaButtonHref: "/booking#inquiry",

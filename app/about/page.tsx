@@ -19,6 +19,7 @@ export default function AboutPage() {
     aboutImagePaths,
     signatureVideoPath,
     videoAriaLabel,
+    videoAspectRatio,
     galleryAltPrefix,
   } = aboutContent;
 
@@ -168,16 +169,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Signature video (loop) — contain to show full frame, no cropping */}
+      {/* Signature video (loop) — purple frame; container aspect ratio matches video so border hugs with no gap */}
       <section
         aria-label="Introduction video"
-        className="relative flex h-[70vh] w-full items-center justify-center overflow-hidden px-4 pt-8 pb-16"
+        className="relative flex w-full justify-center px-4 pt-8 pb-16"
       >
-        <div className="relative h-full w-full max-w-4xl">
+        <div
+          className="relative w-full max-w-4xl"
+          style={{ aspectRatio: videoAspectRatio }}
+        >
           <HeroVideo
             src={signatureVideoPath}
             ariaLabel={videoAriaLabel}
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-cover"
+            frameVariant="purple"
           />
         </div>
       </section>
