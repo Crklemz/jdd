@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { homeContent } from "@/content";
+import { HeroVideo } from "./components/HeroVideo";
 import { RotatingQuote } from "./components/RotatingQuote";
 import { ScrollGallery } from "./components/ScrollGallery";
 import { TrippyBackground } from "./components/TrippyBackground";
@@ -28,14 +29,10 @@ export default function HomePage() {
         aria-label="Introduction"
         className="relative left-1/2 flex h-[90vh] w-[90vw] max-h-[90vh] -translate-x-1/2 items-center justify-center overflow-hidden"
       >
-        <video
+        <HeroVideo
           src={signatureVideoPath}
-          autoPlay
-          muted
-          loop
-          playsInline
+          ariaLabel={videoAriaLabel}
           className="absolute inset-0 h-full w-full object-contain"
-          aria-label={videoAriaLabel}
         />
       </section>
 
