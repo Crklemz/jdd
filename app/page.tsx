@@ -125,12 +125,12 @@ export default function HomePage() {
             className="w-px shrink-0 bg-border"
             aria-hidden
           />
-          <div className="image-radial-fade w-2/5 shrink-0 overflow-hidden">
+          <div className="w-2/5 shrink-0 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${LANDING}/1.jpg`}
+              src={`${LANDING}/4.jpeg`}
               alt={sectionImageAlts.eventTypes}
-              className="h-auto w-full object-contain"
+              className="h-auto w-full rounded-lg object-contain"
             />
           </div>
         </div>
