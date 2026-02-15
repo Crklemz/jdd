@@ -44,7 +44,7 @@ export const aboutContent: AboutContent = {
     "/about-images/20.jpg",
     "/about-images/21.jpg",
   ],
-  signatureVideoPath: "/OSS3.mp4",
+  signatureVideoPath: "/jddintro.mp4",
   ctaButtonLabel: "Bring Jester Dapper Dan to your event!",
   ctaButtonHref: "/booking#inquiry",
 };
