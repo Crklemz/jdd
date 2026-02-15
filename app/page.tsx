@@ -23,10 +23,10 @@ export default function HomePage() {
 
   return (
     <div className="space-y-0 py-8">
-      {/* Hero with video background */}
+      {/* Hero: video only — full viewport width, height capped at fold */}
       <section
         aria-label="Introduction"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex min-h-[70vh] w-screen items-center justify-center overflow-hidden"
+        className="relative left-1/2 flex h-[90vh] w-[90vw] max-h-[90vh] -translate-x-1/2 items-center justify-center overflow-hidden"
       >
         <video
           src={signatureVideoPath}
@@ -34,11 +34,17 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-contain"
           aria-label={videoAriaLabel}
         />
-        <div className="absolute inset-0 bg-background/80" aria-hidden />
-        <div className="relative z-10 mx-4 -mt-12 max-w-2xl space-y-6 text-center md:-mt-16">
+      </section>
+
+      {/* Hero content: tagline & invocation below the video */}
+      <section
+        aria-label="Tagline"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-card py-16"
+      >
+        <div className="relative z-10 mx-4 max-w-2xl space-y-6 text-center md:mx-auto">
           <Image
             src="/about-images/Jester Signature.png"
             alt=""
