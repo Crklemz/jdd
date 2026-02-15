@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { aboutContent } from "@/content";
 import { HeroVideo } from "../components/HeroVideo";
-import { RotatingQuote } from "../components/RotatingQuote";
+import { ScatteredTestimonials } from "../components/ScatteredTestimonials";
 import { ScrollGallery } from "../components/ScrollGallery";
 
 export default function AboutPage() {
@@ -147,7 +147,7 @@ export default function AboutPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12"
       >
         <div className="relative z-10 px-4">
-          <RotatingQuote quotes={testimonialQuotes} />
+          <ScatteredTestimonials quotes={testimonialQuotes} />
         </div>
       </section>
 

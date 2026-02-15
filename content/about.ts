@@ -31,6 +31,9 @@ export const aboutContent: AboutContent = {
     "Absolutely hilarious!",
     "Magnetic presence",
     "Flawless execution",
+    "Immersive experience", 
+    "Incredible energy!",
+    "Exceptional talent"
   ],
   aboutImagePaths: [
     "/about-images/12.JPG",
