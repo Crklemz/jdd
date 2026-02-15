@@ -24,17 +24,6 @@ export default function HomePage() {
 
   return (
     <div className="space-y-0 py-8">
-      {/* Hero: video only — full viewport width, height capped at fold */}
-      <section
-        aria-label="Introduction"
-        className="relative left-1/2 flex h-[90vh] w-[90vw] max-h-[90vh] -translate-x-1/2 items-center justify-center overflow-hidden"
-      >
-        <HeroVideo
-          src={signatureVideoPath}
-          ariaLabel={videoAriaLabel}
-          className="absolute inset-0 h-full w-full object-contain"
-        />
-      </section>
 
       {/* Hero content: tagline & invocation below the video */}
       <section
@@ -56,6 +45,17 @@ export default function HomePage() {
             {hero.invocation}
           </h1>
         </div>
+      </section>
+
+      <section
+        aria-label="Introduction"
+        className="relative left-1/2 flex h-[90vh] w-[90vw] max-h-[90vh] -translate-x-1/2 items-center justify-center overflow-hidden"
+      >
+        <HeroVideo
+          src={signatureVideoPath}
+          ariaLabel={videoAriaLabel}
+          className="absolute inset-0 h-full w-full object-contain"
+        />
       </section>
 
       {/* Identity & energy: solid background */}
