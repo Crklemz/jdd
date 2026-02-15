@@ -7,6 +7,8 @@ interface ScrollGalleryProps {
   imageClassName?: string;
   /** Duration in seconds for one full cycle (lower = faster). Top gallery typically faster than bottom. */
   scrollDurationSeconds?: number;
+  /** Scroll direction: "rtl" = right-to-left (default), "ltr" = left-to-right */
+  direction?: "ltr" | "rtl";
 }
 
 export function ScrollGallery({
@@ -15,6 +17,7 @@ export function ScrollGallery({
   className = "",
   imageClassName = "",
   scrollDurationSeconds = 60,
+  direction = "rtl",
 }: ScrollGalleryProps) {
   const duplicatedPaths = [...imagePaths, ...imagePaths];
 
@@ -22,7 +25,10 @@ export function ScrollGallery({
     <div className={`overflow-hidden py-4 ${className}`}>
       <div
         className="flex w-max gap-4"
-        style={{ animation: `ticker ${scrollDurationSeconds}s linear infinite` }}
+        style={{
+          animation: `ticker ${scrollDurationSeconds}s linear infinite`,
+          animationDirection: direction === "ltr" ? "reverse" : "normal",
+        }}
       >
         {duplicatedPaths.map((src, i) => (
           <div

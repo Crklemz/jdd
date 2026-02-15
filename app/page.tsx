@@ -141,8 +141,7 @@ export default function HomePage() {
         aria-label="Reviews"
         className=" relative mt-26 flex min-h-[120px] w-full items-center overflow-hidden rounded-t-lg"
       >
-        <TrippyBackground />
-        <div className="absolute inset-0 bg-background/25" aria-hidden />
+        <div className="absolute inset-0" aria-hidden />
           <div className="relative z-10 w-full px-4 md:px-6">
             <div className="flex justify-center">
               <RotatingQuote quotes={reviewQuotes} />
@@ -153,11 +152,12 @@ export default function HomePage() {
               altPrefix={galleryAltPrefix}
               className="mb-4"
               scrollDurationSeconds={70}
+              direction="ltr"
             />
             <ScrollGallery
               imagePaths={landingImagePaths.slice(6, 11)}
               altPrefix={galleryAltPrefix}
-              scrollDurationSeconds={35}
+              scrollDurationSeconds={70}
             />
           </div>
         </div>
