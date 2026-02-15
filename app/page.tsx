@@ -99,10 +99,10 @@ export default function HomePage() {
         aria-label="Event types"
         className="mt-16 flex flex-col overflow-hidden"
       >
-        <div className="flex w-full items-stretch gap-0 p-6 md:p-8">
+        <div className="flex w-full items-center gap-0 p-6 md:p-8">
           <div className="flex w-3/5 min-w-0 flex-col pr-6 md:pr-8">
-            <div className="flex flex-1 flex-col items-center justify-center">
-              <p className="font-display text-2xl text-foreground md:text-3xl text-center">
+            <div className="flex flex-1 flex-col items-center">
+              <p className="font-display mb-5 text-2xl text-foreground md:text-3xl text-center">
                 {eventTypesIntro}
               </p>
             </div>
