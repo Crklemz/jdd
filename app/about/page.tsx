@@ -70,7 +70,7 @@ export default function AboutPage() {
       {/* Becoming Jester Dapper Dan + image */}
       <section
         aria-label="Becoming Jester Dapper Dan"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-y border-border/50 py-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
         <div className="mx-auto flex max-w-5xl flex-col gap-12 px-4 md:flex-row-reverse md:items-start md:gap-16">
           <div className="min-w-0 flex-1 space-y-6">
@@ -117,27 +117,58 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why choose me — ticker-style strip to match home */}
+      {/* Why choose me — three pillars as cards */}
       <section
         aria-label="Why choose me"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
-        <div className="mx-auto max-w-4xl space-y-8 px-4">
+        <div className="mx-auto max-w-5xl space-y-10 px-4">
           <h2 className="text-center font-display text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
             {whyChooseHeading}
           </h2>
-          <div className="ticker-strip overflow-hidden border-y border-border py-6">
-            <div className="flex w-max gap-10 whitespace-nowrap animate-ticker">
-              {[...whyChooseItems, ...whyChooseItems].map((item, i) => (
-                <span
+          <ul className="grid gap-6 sm:grid-cols-3" role="list">
+            {whyChooseItems.map((item, i) => {
+              const match = item.match(/^([^(]+)(?:\s*\(([^)]+)\))?$/);
+              const title = match ? match[1].trim() : item;
+              const detail = match?.[2]?.trim() ?? null;
+              const accentClass = [
+                "neon-text-purple text-shadow-neon-purple",
+                "neon-text-blue text-shadow-neon-blue",
+                "neon-text-pink text-shadow-neon-pink",
+              ][i % 3];
+              const borderClass = [
+                "border-l-[#bf00ff]",
+                "border-l-[#00d4ff]",
+                "border-l-[#ff10f0]",
+              ][i % 3];
+              return (
+                <li
                   key={`${item}-${i}`}
-                  className="font-display text-lg italic text-foreground md:text-xl"
+                  className={`rounded-xl border border-border bg-card pl-5 pr-5 py-5 sm:pl-6 sm:pr-6 sm:py-6 border-l-4 ${borderClass} transition-shadow hover:shadow-[0_0_24px_rgba(191,0,255,0.08)]`}
                 >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
+                  <h3
+                    className={`font-display text-xl font-semibold leading-snug ${accentClass} md:text-2xl`}
+                  >
+                    {title}
+                  </h3>
+                  {detail && (
+                    <ul className="mt-3 space-y-1.5 text-muted-foreground leading-relaxed" role="list">
+                      {detail
+                        .split("/")
+                        .map((part) => part.trim())
+                        .filter(Boolean)
+                        .map((bullet, j) => (
+                          <li key={j} className="flex items-start gap-2">
+                            <span className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </section>
 
