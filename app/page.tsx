@@ -51,12 +51,12 @@ export default function HomePage() {
 
       <section
         aria-label="Introduction"
-        className="relative left-1/2 flex h-[90vh] w-[90vw] max-h-[90vh] -translate-x-1/2 items-center justify-center overflow-hidden"
+        className="relative left-1/2 flex h-[85vh] w-[85vw] max-h-[85vh] -translate-x-1/2 items-center justify-center overflow-hidden"
       >
         <HeroVideo
           src={signatureVideoPath}
           ariaLabel={videoAriaLabel}
-          className="absolute inset-0 h-full w-full object-contain"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </section>
 

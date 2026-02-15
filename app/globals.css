@@ -329,6 +329,13 @@ body {
   animation: cta-neon-glow 2.5s ease-in-out infinite;
 }
 
+/* Hero video frame: same neon border and glow as CTA (no background) */
+.hero-video-neon-frame {
+  border: 2px solid #00d4ff;
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.7), 0 0 16px rgba(0, 180, 255, 0.4);
+  animation: cta-neon-glow 2.5s ease-in-out infinite;
+}
+
 .cta-rainbow-pulsate-text {
   background: linear-gradient(
     90deg,

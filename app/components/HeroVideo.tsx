@@ -16,7 +16,7 @@ export function HeroVideo({ src, ariaLabel, className = "" }: HeroVideoProps) {
   };
 
   return (
-    <div className="absolute inset-0">
+    <div className="hero-video-neon-frame absolute inset-0 overflow-hidden rounded-lg">
       <video
         src={src}
         autoPlay
