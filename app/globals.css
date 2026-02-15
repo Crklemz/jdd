@@ -234,6 +234,67 @@ body {
   pointer-events: none;
 }
 
+/* Sticky CTA: black button, neon blue border, rainbow pulsating text */
+@keyframes cta-rainbow-text {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+@keyframes cta-text-pulsate {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.92;
+    filter: brightness(1.15);
+  }
+}
+
+@keyframes cta-neon-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(0, 200, 255, 0.7), 0 0 16px rgba(0, 180, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(0, 220, 255, 0.9), 0 0 28px rgba(0, 200, 255, 0.5);
+  }
+}
+
+.cta-button-black-neon {
+  background: #0a0a0a;
+  border: 2px solid #00d4ff;
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.7), 0 0 16px rgba(0, 180, 255, 0.4);
+  animation: cta-neon-glow 2.5s ease-in-out infinite;
+}
+
+.cta-rainbow-pulsate-text {
+  background: linear-gradient(
+    90deg,
+    hsl(0, 95%, 70%),
+    hsl(35, 95%, 70%),
+    hsl(60, 95%, 70%),
+    hsl(120, 95%, 65%),
+    hsl(180, 95%, 65%),
+    hsl(220, 95%, 70%),
+    hsl(270, 95%, 70%),
+    hsl(320, 95%, 70%),
+    hsl(360, 95%, 70%)
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation:
+    cta-rainbow-text 10s linear infinite,
+    cta-text-pulsate 2.2s ease-in-out infinite;
+}
+
 /* Reviews section: fade to transparent at bottom so section below shows through */
 .fade-bottom {
   -webkit-mask-image: linear-gradient(

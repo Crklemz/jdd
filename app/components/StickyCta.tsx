@@ -4,17 +4,18 @@ import { homeContent } from "@/content";
 export function StickyCta() {
   return (
     <div
-      className="sticky bottom-0 z-30 border-t border-border bg-card py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]"
+      className="sticky top-14 z-30 flex justify-center py-2"
       role="banner"
+      aria-label="Call to action"
     >
-      <div className="mx-auto max-w-6xl px-4 text-center">
-        <Link
-          href={homeContent.ctaButtonHref}
-          className="inline-block rounded-full bg-accent px-8 py-3 font-display text-lg font-semibold text-background no-underline transition hover:bg-accent-hover"
-        >
+      <Link
+        href={homeContent.ctaButtonHref}
+        className="cta-button-black-neon inline-block rounded-full px-6 py-2.5 no-underline transition hover:opacity-90 sm:px-8 sm:py-3"
+      >
+        <span className="cta-rainbow-pulsate-text inline-block font-display text-base font-semibold sm:text-lg">
           {homeContent.ctaButtonLabel}
-        </Link>
-      </div>
+        </span>
+      </Link>
     </div>
   );
 }

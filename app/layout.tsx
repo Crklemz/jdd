@@ -38,8 +38,8 @@ export default function RootLayout({
     >
       <body className="min-h-screen antialiased">
         <Nav />
-        <main className="mx-auto max-w-6xl px-4 pb-24">{children}</main>
         <StickyCta />
+        <main className="mx-auto max-w-6xl px-4 pb-24">{children}</main>
       </body>
     </html>
   );
