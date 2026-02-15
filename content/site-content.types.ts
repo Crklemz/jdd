@@ -11,6 +11,7 @@ export interface HomeContent {
     energy1: string;
     energy2: string;
   };
+  scrapbookImagePaths: string[];
   skillsHeading: string;
   skillsList: string[];
   eventTypesIntro: string;

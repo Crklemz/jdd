@@ -12,6 +12,13 @@ export const homeContent: HomeContent = {
     energy2:
       "I upgrade rooms. I celebrate. I bring aliveness.",
   },
+  scrapbookImagePaths: [
+    "/exp-images/Fantasy/48.jpg",
+    "/exp-images/Fantasy/49.jpg",
+    "/exp-images/Fantasy/42.jpeg",
+    "/exp-images/Childrens/34.jpg",
+    "/landing-images/2.jpg",
+  ],
   skillsHeading: "I am a jack of all trades and trickster jester of many hats, skills & passions:",
   skillsList: [
     "Trickster Comedian",

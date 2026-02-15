@@ -3,6 +3,7 @@ import { homeContent } from "@/content";
 import { HeroVideo } from "./components/HeroVideo";
 import { NeonBackground } from "./components/NeonBackground";
 import { RotatingQuote } from "./components/RotatingQuote";
+import { ScrapbookSection } from "./components/ScrapbookSection";
 import { ScrollGallery } from "./components/ScrollGallery";
 import { TrippyBackground } from "./components/TrippyBackground";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
     eventTypesIntro,
     eventTypesList,
     reviewQuotes,
+    scrapbookImagePaths,
     landingImagePaths,
     signatureVideoPath,
     videoAriaLabel,
@@ -85,6 +87,10 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <ScrapbookSection
+            imagePaths={scrapbookImagePaths}
+            altPrefix={galleryAltPrefix}
+          />
           <div className="space-y-10 text-center">
             <p className="mx-auto max-w-4xl font-display text-2xl italic md:text-3xl neon-text-pink text-shadow-neon-pink">
               <span className="fancy-underline fancy-underline-neon-rainbow">{hero.energy1}</span>
