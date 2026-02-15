@@ -75,7 +75,7 @@ export default function HomePage() {
               className="h-auto w-full max-w-xl object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.7),0_0_50px_rgba(255,255,255,0.4)]"
             />
           </div>
-          <div className="flex flex-col justify-center gap-4 pt-6 md:p-8">
+          <div className="flex flex-col justify-center gap-4 pt-6 md:pt-8">
             <p className="text-center text-xl uppercase tracking-wider neon-text-purple text-shadow-neon-purple md:text-2xl">
               {skillsHeading}
             </p>
