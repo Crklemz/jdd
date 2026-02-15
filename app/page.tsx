@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { homeContent } from "@/content";
 import { HeroVideo } from "./components/HeroVideo";
+import { NeonBackground } from "./components/NeonBackground";
 import { RotatingQuote } from "./components/RotatingQuote";
 import { ScrollGallery } from "./components/ScrollGallery";
 import { TrippyBackground } from "./components/TrippyBackground";
@@ -23,12 +24,13 @@ export default function HomePage() {
   } = homeContent;
 
   return (
-    <div className="space-y-0 py-8">
-
+    <div className="relative min-h-screen space-y-0 py-8">
+      <NeonBackground />
+      <div className="relative z-10">
       {/* Hero content: tagline & invocation below the video */}
       <section
         aria-label="Tagline"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-card py-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
         <div className="relative z-10 mx-4 max-w-2xl space-y-6 text-center md:mx-auto">
           <Image
@@ -58,10 +60,10 @@ export default function HomePage() {
         />
       </section>
 
-      {/* Identity & energy: solid background */}
+      {/* Identity & energy: transparent so neon background shows */}
       <section
         aria-label="About"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-card py-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
         <div className="mx-auto flex flex-col gap-16 px-4">
           <div className="space-y-8 text-center">
@@ -69,7 +71,7 @@ export default function HomePage() {
               {hero.identity}
             </p>
           </div>
-          <div className="flex flex-col justify-center gap-4 bg-card p-6 md:p-8">
+          <div className="flex flex-col justify-center gap-4 p-6 md:p-8">
             <p className="text-center text-xl uppercase tracking-wider neon-text-purple text-shadow-neon-purple md:text-2xl">
               {skillsHeading}
             </p>
@@ -140,7 +142,7 @@ export default function HomePage() {
         className=" relative mt-26 flex min-h-[120px] w-full items-center overflow-hidden rounded-t-lg"
       >
         <TrippyBackground />
-        <div className="absolute inset-0 bg-background/60" aria-hidden />
+        <div className="absolute inset-0 bg-background/25" aria-hidden />
           <div className="relative z-10 w-full px-4 md:px-6">
             <div className="flex justify-center">
               <RotatingQuote quotes={reviewQuotes} />
@@ -160,6 +162,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }
