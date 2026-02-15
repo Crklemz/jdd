@@ -17,7 +17,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4">
         <Link
           href="/"
-          className="flex items-center font-display text-xl font-semibold text-foreground no-underline"
+          className="flex items-center gap-3 font-display text-xl font-semibold text-foreground no-underline"
           aria-label="Jester Dapper Dan – Home"
         >
           <span className="relative block h-12 w-auto max-w-[260px] [@media(min-width:480px)]:max-w-[320px]">
@@ -28,6 +28,15 @@ export function Nav() {
               height={96}
               className="h-full w-auto object-contain object-left"
               priority
+            />
+          </span>
+          <span className="relative block h-12 w-12 shrink-0 overflow-hidden rounded-full">
+            <Image
+              src="/landing-images/1.jpg"
+              alt=""
+              width={48}
+              height={48}
+              className="h-full w-full object-cover"
             />
           </span>
         </Link>
