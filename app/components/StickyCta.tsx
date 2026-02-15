@@ -4,7 +4,7 @@ import { homeContent } from "@/content";
 export function StickyCta() {
   return (
     <div
-      className="sticky top-20 z-30 flex justify-center py-2"
+      className="sticky top-25 z-30 flex justify-center py-2"
       role="banner"
       aria-label="Call to action"
     >
