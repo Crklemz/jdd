@@ -32,16 +32,9 @@ export default function HomePage() {
       {/* Hero content: tagline & invocation below the video */}
       <section
         aria-label="Tagline"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-16"
       >
         <div className="relative z-10 mx-4 max-w-2xl space-y-6 text-center md:mx-auto">
-          <Image
-            src="/about-images/Jester Signature.png"
-            alt=""
-            width={260}
-            height={104}
-            className="mx-auto mb-8 h-24 w-auto object-contain md:h-28 md:mb-10"
-          />
           <p className="text-lg uppercase tracking-widest neon-text-pink text-shadow-neon-pink">
             {hero.tagline}
           </p>
@@ -82,7 +75,7 @@ export default function HomePage() {
               className="h-auto w-full max-w-xl object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.7),0_0_50px_rgba(255,255,255,0.4)]"
             />
           </div>
-          <div className="flex flex-col justify-center gap-4 p-6 md:p-8">
+          <div className="flex flex-col justify-center gap-4 pt-6 md:p-8">
             <p className="text-center text-xl uppercase tracking-wider neon-text-purple text-shadow-neon-purple md:text-2xl">
               {skillsHeading}
             </p>
