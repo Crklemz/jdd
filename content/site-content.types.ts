@@ -44,6 +44,8 @@ export interface AboutContent {
   testimonialQuotes: string[];
   aboutImagePaths: string[];
   signatureVideoPath: string;
+  videoAriaLabel: string;
+  galleryAltPrefix: string;
   ctaButtonLabel: string;
   ctaButtonHref: string;
 }
