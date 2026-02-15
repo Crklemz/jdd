@@ -13,11 +13,12 @@ export const homeContent: HomeContent = {
       "I upgrade rooms. I celebrate. I bring aliveness.",
   },
   scrapbookImagePaths: [
-    "/exp-images/Fantasy/48.jpg",
-    "/exp-images/Fantasy/49.jpg",
-    "/exp-images/Fantasy/42.jpeg",
-    "/exp-images/Childrens/34.jpg",
-    "/landing-images/2.jpg",
+    "/about-images/14.jpeg",
+    "/about-images/20.jpg",
+    "/about-images/21.jpg",
+    "/exp-images/Childrens/35.jpg",
+    "/exp-images/Fantasy/41.jpg",
+    "/landing-images/6.jpg",
   ],
   skillsHeading: "I am a jack of all trades and trickster jester of many hats, skills & passions:",
   skillsList: [
