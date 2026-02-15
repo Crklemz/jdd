@@ -57,7 +57,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-72 w-full shrink-0 overflow-hidden rounded-lg border border-border md:h-80 md:w-80">
             <Image
-              src="/about-images/14.jpeg"
+              src="/about-images/16.jpg"
               alt=""
               fill
               className="object-cover"
@@ -87,7 +87,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-72 w-full shrink-0 overflow-hidden rounded-lg border border-border md:h-80 md:w-80">
             <Image
-              src="/about-images/18.jpg"
+              src="/about-images/14.jpeg"
               alt=""
               fill
               className="object-cover"
