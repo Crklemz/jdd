@@ -110,7 +110,7 @@ export default function AboutPage() {
             {whatSetsApartItems.map((item, i) => (
               <li key={i} className="flex gap-3 text-lg leading-relaxed">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-                <span>{item}</span>
+                <span className="underline">{item}</span>
               </li>
             ))}
           </ul>
@@ -173,14 +173,14 @@ export default function AboutPage() {
       </section>
 
       {/* Testimonials */}
-      <section
+      {/* <section
         aria-label="Testimonials"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12"
       >
         <div className="relative z-10 px-4">
           <ScatteredTestimonials quotes={testimonialQuotes} />
         </div>
-      </section>
+      </section> */}
 
       {/* Two scrolling galleries (pictures 12–21) */}
       <section aria-label="Gallery" className="relative overflow-hidden py-8">
