@@ -200,13 +200,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Signature video (loop) — purple frame; container aspect ratio matches video so border hugs with no gap */}
+      {/* Signature video (same styling as home page: full-bleed, 100% mobile/tablet, 80vw desktop) */}
       <section
         aria-label="Introduction video"
-        className="relative flex w-full justify-center px-4 pt-8 pb-16"
+        className="relative left-1/2 right-1/2 flex -ml-[50vw] -mr-[50vw] w-screen justify-center px-4 pt-8 pb-16 lg:px-0"
       >
         <div
-          className="relative w-full max-w-4xl"
+          className="relative w-full lg:w-[70vw] lg:max-w-[70vw]"
           style={{ aspectRatio: videoAspectRatio }}
         >
           <HeroVideo

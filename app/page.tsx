@@ -39,13 +39,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Signature video (same as about page: aspect ratio + purple frame) */}
+      {/* Signature video (same as about page: aspect ratio + purple frame); full-bleed section so video can be 90vw on desktop */}
       <section
         aria-label="Introduction video"
-        className="relative flex w-full justify-center px-4 pb-8"
+        className="relative left-1/2 right-1/2 flex -ml-[50vw] -mr-[50vw] w-screen justify-center pb-8 px-4 lg:px-0"
       >
         <div
-          className="relative w-full max-w-4xl"
+          className="relative w-full lg:w-[80vw] lg:max-w-[80vw]"
           style={{ aspectRatio: videoAspectRatio }}
         >
           <HeroVideo
