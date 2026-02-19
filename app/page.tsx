@@ -183,13 +183,13 @@ export default function HomePage() {
                 imagePaths={landingImagePaths.slice(0, 6)}
                 altPrefix={galleryAltPrefix}
                 className="mb-4"
-                scrollDurationSeconds={70}
+                scrollDurationSeconds={25}
                 direction="ltr"
               />
               <ScrollGallery
                 imagePaths={landingImagePaths.slice(6, 11)}
                 altPrefix={galleryAltPrefix}
-                scrollDurationSeconds={70}
+                scrollDurationSeconds={25}
               />
             </div>
           </div>
