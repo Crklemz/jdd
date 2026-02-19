@@ -72,6 +72,7 @@ export const homeContent: HomeContent = {
   ],
   signatureVideoPath: "/jddintro.mp4",
   videoAriaLabel: "Jester Dapper Dan signature video",
+  videoAspectRatio: "16/9",
   galleryAltPrefix: "Jester Dapper Dan",
   sectionImageAlts: {
     skills: "Jester Dapper Dan in character",

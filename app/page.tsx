@@ -4,7 +4,6 @@ import { HeroVideo } from "./components/HeroVideo";
 import { RotatingQuote } from "./components/RotatingQuote";
 import { ScrapbookSection } from "./components/ScrapbookSection";
 import { ScrollGallery } from "./components/ScrollGallery";
-import { TrippyBackground } from "./components/TrippyBackground";
 
 const LANDING = "/landing-images";
 
@@ -20,6 +19,7 @@ export default function HomePage() {
     landingImagePaths,
     signatureVideoPath,
     videoAriaLabel,
+    videoAspectRatio,
     galleryAltPrefix,
     sectionImageAlts,
   } = homeContent;
@@ -27,30 +27,46 @@ export default function HomePage() {
   return (
     <div className="relative min-h-screen space-y-0 py-8">
       <div className="relative">
-      {/* Hero content: tagline & invocation below the video */}
+      {/* Tagline at top */}
       <section
         aria-label="Tagline"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-8"
       >
-        <div className="relative z-10 mx-4 max-w-2xl space-y-6 text-center md:mx-auto">
+        <div className="relative z-10 mx-4 max-w-2xl text-center md:mx-auto">
           <p className="text-lg uppercase tracking-widest neon-text-pink text-shadow-neon-pink">
             {hero.tagline}
           </p>
+        </div>
+      </section>
+
+      {/* Signature video (same as about page: aspect ratio + purple frame) */}
+      <section
+        aria-label="Introduction video"
+        className="relative flex w-full justify-center px-4 pb-8"
+      >
+        <div
+          className="relative w-full max-w-4xl"
+          style={{ aspectRatio: videoAspectRatio }}
+        >
+          <HeroVideo
+            src={signatureVideoPath}
+            ariaLabel={videoAriaLabel}
+            className="absolute inset-0 h-full w-full object-cover"
+            frameVariant="purple"
+          />
+        </div>
+      </section>
+
+      {/* Invocation below the video */}
+      <section
+        aria-label="Invocation"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-16"
+      >
+        <div className="relative z-10 mx-4 max-w-2xl text-center md:mx-auto">
           <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl neon-text-blue text-shadow-neon-blue">
             {hero.invocation}
           </h1>
         </div>
-      </section>
-
-      <section
-        aria-label="Introduction"
-        className="relative left-1/2 flex h-[85vh] w-[85vw] max-h-[85vh] -translate-x-1/2 items-center justify-center overflow-hidden"
-      >
-        <HeroVideo
-          src={signatureVideoPath}
-          ariaLabel={videoAriaLabel}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
       </section>
 
       {/* Identity & energy: transparent so neon background shows */}

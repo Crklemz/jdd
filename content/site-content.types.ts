@@ -22,6 +22,7 @@ export interface HomeContent {
   landingImagePaths: string[];
   signatureVideoPath: string;
   videoAriaLabel: string;
+  videoAspectRatio: string;
   galleryAltPrefix: string;
   /** Alt text for decorative section images (skills, event types, energy block). */
   sectionImageAlts: {
