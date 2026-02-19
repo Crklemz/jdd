@@ -31,7 +31,7 @@ export default function AboutPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-12"
       >
         <div className="relative z-10 mx-4 max-w-2xl space-y-4 text-center md:mx-auto">
-          <h1 className="font-display text-4xl font-bold leading-tight text-foreground md:text-5xl">
+          <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl neon-text-pink text-shadow-neon-pink">
             {welcomeHeading}
           </h1>
         </div>
