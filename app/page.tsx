@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { homeContent } from "@/content";
 import { HeroVideo } from "./components/HeroVideo";
 import { RotatingQuote } from "./components/RotatingQuote";
@@ -193,6 +194,21 @@ export default function HomePage() {
               />
             </div>
           </div>
+        </section>
+
+        {/* Same CTA as sticky top, bottom of page */}
+        <section
+          aria-label="Book Jester Dapper Dan"
+          className="flex justify-center py-12"
+        >
+          <Link
+            href={homeContent.ctaButtonHref}
+            className="cta-button-black-neon inline-block rounded-full px-6 py-2.5 no-underline transition hover:opacity-90 sm:px-8 sm:py-3"
+          >
+            <span className="cta-rainbow-pulsate-text inline-block font-display text-base font-semibold sm:text-lg">
+              Book Jester Dapper Dan!
+            </span>
+          </Link>
         </section>
       </div>
     </div>
