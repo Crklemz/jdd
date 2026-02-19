@@ -8,6 +8,7 @@ export interface HomeContent {
     tagline: string;
     invocation: string;
     identity: string;
+    identity2: string;
     energy1: string;
     energy2: string;
   };

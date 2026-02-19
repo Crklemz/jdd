@@ -6,7 +6,9 @@ export const homeContent: HomeContent = {
     invocation:
       "Step inside my realm of magic & mischief! I am Jester Dapper Dan – chic, whimsical, effervescent™",
     identity:
-      "I am a fantasy court jester of the 21st century with a Ph.D. I bring incomparable elegance, inimitable wit and insuperable enthusiasm everywhere I go.",
+      "I am a fantasy court jester of the 21st century with a Ph.D.",
+      identity2:
+      "I bring incomparable elegance, inimitable wit and insuperable enthusiasm everywhere I go.",
     energy1:
       "I don't perform. I don't party. I don't do industry standard.",
     energy2:
