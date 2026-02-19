@@ -30,7 +30,7 @@ export default function HomePage() {
       {/* Tagline at top */}
       <section
         aria-label="Tagline"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-8"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-10 pt-2"
       >
         <div className="relative z-10 mx-4 max-w-2xl text-center md:mx-auto">
           <p className="text-lg uppercase tracking-widest neon-text-pink text-shadow-neon-pink">
@@ -60,9 +60,9 @@ export default function HomePage() {
       {/* Invocation below the video */}
       <section
         aria-label="Invocation"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-8 pt-16"
       >
-        <div className="relative z-10 mx-4 max-w-2xl text-center md:mx-auto">
+        <div className="relative z-10 mx-4 max-w-4xl text-center md:mx-auto">
           <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl neon-text-blue text-shadow-neon-blue">
             {hero.invocation}
           </h1>
