@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { aboutContent } from "@/content";
+import { aboutContent, homeContent } from "@/content";
 import { HeroVideo } from "../components/HeroVideo";
-import { ScatteredTestimonials } from "../components/ScatteredTestimonials";
 import { ScrollGallery } from "../components/ScrollGallery";
+import Link from "next/link";
 
 export default function AboutPage() {
   const {
@@ -217,6 +217,20 @@ export default function AboutPage() {
           />
         </div>
       </section>
+      {/* Same CTA as sticky top, bottom of page */}
+      <section
+          aria-label="Book Jester Dapper Dan"
+          className="flex justify-center py-12"
+        >
+          <Link
+            href={homeContent.ctaButtonHref}
+            className="cta-button-black-neon inline-block rounded-full px-6 py-2.5 no-underline transition hover:opacity-90 sm:px-8 sm:py-3"
+          >
+            <span className="cta-rainbow-pulsate-text inline-block font-display text-base font-semibold sm:text-lg">
+              Book Jester Dapper Dan!
+            </span>
+          </Link>
+        </section>
     </div>
   );
 }
