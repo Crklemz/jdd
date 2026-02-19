@@ -34,7 +34,7 @@ export function ScatteredTestimonials({
 
   return (
     <div
-      className={`relative mx-auto min-h-[220px] w-full max-w-2xl px-4 py-5 md:min-h-[260px] ${className}`}
+      className={`relative mx-auto min-h-[180px] w-full max-w-2xl px-4 py-5 sm:min-h-[220px] md:min-h-[260px] ${className}`}
       aria-label="Testimonials"
     >
       {quotes.map((quote, i) => {
@@ -43,7 +43,7 @@ export function ScatteredTestimonials({
         return (
           <p
             key={`${i}-${quote.slice(0, 20)}`}
-            className="absolute whitespace-nowrap font-display text-base italic text-accent md:text-lg"
+            className="absolute max-w-[85%] font-display text-sm italic text-accent whitespace-normal sm:max-w-none sm:whitespace-nowrap sm:text-base md:text-lg"
             style={{
               left: `${pos.left}%`,
               top: `${pos.top}%`,

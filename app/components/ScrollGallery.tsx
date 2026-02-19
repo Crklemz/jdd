@@ -33,14 +33,14 @@ export function ScrollGallery({
         {duplicatedPaths.map((src, i) => (
           <div
             key={`${src}-${i}`}
-            className="relative h-64 min-w-[280px] shrink-0 overflow-hidden rounded-lg"
+            className="relative h-48 min-w-[220px] shrink-0 overflow-hidden rounded-lg sm:h-64 sm:min-w-[280px]"
           >
             <Image
               src={src}
               alt={`${altPrefix} ${(i % imagePaths.length) + 1}`}
               fill
               className={`object-cover ${imageClassName}`}
-              sizes="280px"
+              sizes="(max-width: 640px) 220px, 280px"
             />
           </div>
         ))}
