@@ -131,21 +131,21 @@ export default function HomePage() {
         {/* Event types */}
         <section
           aria-label="Event types"
-          className="mt-16 flex flex-col overflow-hidden"
+          className="mt-12 flex flex-col overflow-hidden md:mt-16"
         >
-          <div className="flex w-full items-center gap-0 p-6 md:p-8">
-            <div className="flex w-3/5 min-w-0 flex-col pr-6 md:pr-8">
+          <div className="flex w-full flex-col items-stretch gap-0 p-4 sm:p-6 md:p-8 lg:flex-row lg:items-center">
+            <div className="order-2 mt-6 flex min-w-0 flex-1 flex-col lg:order-1 lg:mt-0 lg:w-3/5 lg:pr-6 xl:pr-8">
               <div className="flex flex-1 flex-col items-center">
-                <p className="font-display mb-5 text-2xl text-foreground md:text-3xl text-center">
+                <p className="font-display mb-4 text-center text-xl text-foreground sm:mb-5 sm:text-2xl md:text-3xl">
                   {eventTypesIntro}
                 </p>
               </div>
-              <div className="relative z-10 mt-auto w-full overflow-hidden border-y border-b-accent border-t-accent border-border/50 py-6">
-                <div className="flex w-max gap-10 whitespace-nowrap animate-ticker">
+              <div className="relative z-10 mt-auto w-full overflow-hidden border-y border-b-accent border-t-accent border-border/50 py-4 sm:py-6">
+                <div className="flex w-max gap-6 whitespace-nowrap animate-ticker sm:gap-10">
                   {[...eventTypesList, ...eventTypesList].map((event, i) => (
                     <span
                       key={`${event}-${i}`}
-                      className="font-display text-xl italic text-accent"
+                      className="font-display text-base italic text-accent sm:text-lg md:text-xl"
                     >
                       {event}
                     </span>
@@ -154,10 +154,10 @@ export default function HomePage() {
               </div>
             </div>
             <div
-              className="w-px shrink-0 bg-border"
+              className="hidden shrink-0 w-px bg-border lg:order-2 lg:block"
               aria-hidden
             />
-            <div className="w-2/5 shrink-0 overflow-hidden">
+            <div className="order-first mt-0 w-full shrink-0 overflow-hidden lg:order-3 lg:mt-0 lg:w-2/5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`${LANDING}/4.jpeg`}
