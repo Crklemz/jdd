@@ -60,7 +60,7 @@ export default function HomePage() {
         {/* Identity & energy: transparent so neon background shows */}
         <section
           aria-label="About"
-          className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-6 sm:py-8 md:py-12 lg:py-16"
+          className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
         >
           <div className="mx-auto flex flex-col gap-4 px-4 sm:gap-6 md:gap-10 lg:gap-16">
             <div className="relative z-10 mx-4 max-w-4xl text-center md:mx-auto">
@@ -131,10 +131,10 @@ export default function HomePage() {
         {/* Event types */}
         <section
           aria-label="Event types"
-          className="mt-12 flex flex-col overflow-hidden md:mt-16"
+          className="mt-12 flex flex-col overflow-hidden md:mt-10 lg:mt-8"
         >
           <div className="flex w-full flex-col items-stretch gap-0 p-4 sm:p-6 md:p-8 lg:flex-row lg:items-center">
-            <div className="order-2 mt-6 flex min-w-0 flex-1 flex-col lg:order-1 lg:mt-0 lg:w-3/5 lg:pr-6 xl:pr-8">
+            <div className="order-2 mt-6 flex min-w-0 flex-1 flex-col lg:order-1 lg:mt-0 lg:min-w-4/7 lg:pr-6 xl:pr-8">
               <div className="flex flex-1 flex-col items-center">
                 <p className="font-display mb-4 text-center text-xl text-foreground sm:mb-5 sm:text-2xl md:text-3xl">
                   {eventTypesIntro}
@@ -157,7 +157,7 @@ export default function HomePage() {
               className="hidden shrink-0 w-px bg-border lg:order-2 lg:block"
               aria-hidden
             />
-            <div className="order-first mt-0 w-full shrink-0 overflow-hidden lg:order-3 lg:mt-0 lg:w-2/5">
+            <div className="order-first mt-0 w-full shrink-0 overflow-hidden lg:order-3 lg:mt-0 lg:w-3/7">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`${LANDING}/4.jpeg`}
@@ -171,7 +171,7 @@ export default function HomePage() {
         {/* Reviews: trippy animated background with rotating quote (matches gallery section width) */}
         <section
           aria-label="Reviews"
-          className=" relative mt-26 flex min-h-[120px] w-full items-center overflow-hidden rounded-t-lg"
+          className="relative mt-8 flex min-h-[120px] w-full items-center overflow-hidden rounded-t-lg md:mt-10 lg:mt-12"
         >
           <div className="absolute inset-0" aria-hidden />
           <div className="relative z-10 w-full px-4 md:px-6">
