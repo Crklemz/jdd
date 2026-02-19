@@ -91,11 +91,25 @@ export default function HomePage() {
               </p>
               <div className="ticker-strip overflow-hidden border-y border-border py-6">
                 <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
-                  {[...skillsList, ...skillsList].map((skill, i) => (
-                    <span key={`${skill}-${i}`} className="text-lg text-foreground">
-                      {skill}
-                    </span>
-                  ))}
+                  {[...skillsList, ...skillsList].map((skill, i) => {
+                    const rainbowClasses = [
+                      "neon-text-red text-shadow-neon-red",
+                      "neon-text-orange text-shadow-neon-orange",
+                      "neon-text-yellow text-shadow-neon-yellow",
+                      "neon-text-green text-shadow-neon-green",
+                      "neon-text-blue text-shadow-neon-blue",
+                      "neon-text-purple text-shadow-neon-purple",
+                    ] as const;
+                    const colorClass = rainbowClasses[i % rainbowClasses.length];
+                    return (
+                      <span
+                        key={`${skill}-${i}`}
+                        className={`text-lg ${colorClass}`}
+                      >
+                        {skill}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
