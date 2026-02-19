@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/experiences", label: "Experiences" },
-  { href: "/consulting", label: "Consulting" },
-  { href: "/booking", label: "Booking" },
+  { href: "/", label: "Home", neonClass: "nav-link-neon-1" },
+  { href: "/about", label: "About", neonClass: "nav-link-neon-2" },
+  { href: "/experiences", label: "Experiences", neonClass: "nav-link-neon-3" },
+  { href: "/consulting", label: "Consulting", neonClass: "nav-link-neon-4" },
+  { href: "/booking", label: "Booking", neonClass: "nav-link-neon-5" },
 ] as const;
 
 export function Nav() {
@@ -42,11 +42,11 @@ export function Nav() {
           </span>
         </Link>
         <ul className="flex flex-wrap items-center gap-6">
-          {navLinks.map(({ href, label }) => (
+          {navLinks.map(({ href, label, neonClass }) => (
             <li key={href}>
               <Link
                 href={href}
-                className="text-muted transition hover:text-accent"
+                className={`nav-link-neon ${neonClass} no-underline`}
               >
                 {label}
               </Link>

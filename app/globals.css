@@ -126,6 +126,66 @@ body {
     0 0 40px rgba(120, 60, 255, 0.3);
 }
 
+/* Nav links: each a different neon color; hover = brighten + neon shadow */
+.nav-link-neon {
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.nav-link-neon-1 {
+  color: #00d4ff;
+}
+.nav-link-neon-1:hover {
+  color: #7eeeff;
+  text-shadow:
+    0 0 10px rgba(0, 212, 255, 0.9),
+    0 0 20px rgba(0, 212, 255, 0.6),
+    0 0 40px rgba(0, 212, 255, 0.4);
+}
+
+.nav-link-neon-2 {
+  color: #ff10f0;
+}
+.nav-link-neon-2:hover {
+  color: #ff6ef5;
+  text-shadow:
+    0 0 10px rgba(255, 16, 240, 0.9),
+    0 0 20px rgba(255, 16, 240, 0.6),
+    0 0 40px rgba(255, 80, 220, 0.4);
+}
+
+.nav-link-neon-3 {
+  color: #ff6600;
+}
+.nav-link-neon-3:hover {
+  color: #ff9940;
+  text-shadow:
+    0 0 10px rgba(255, 102, 0, 0.9),
+    0 0 20px rgba(255, 102, 0, 0.6),
+    0 0 40px rgba(255, 140, 50, 0.4);
+}
+
+.nav-link-neon-4 {
+  color: #39ff14;
+}
+.nav-link-neon-4:hover {
+  color: #8aff6e;
+  text-shadow:
+    0 0 10px rgba(57, 255, 20, 0.9),
+    0 0 20px rgba(57, 255, 20, 0.6),
+    0 0 40px rgba(100, 255, 80, 0.4);
+}
+
+.nav-link-neon-5 {
+  color: #bf00ff;
+}
+.nav-link-neon-5:hover {
+  color: #d966ff;
+  text-shadow:
+    0 0 10px rgba(191, 0, 255, 0.9),
+    0 0 20px rgba(191, 0, 255, 0.6),
+    0 0 40px rgba(140, 0, 220, 0.4);
+}
+
 /* Scrolling ticker - apply to inner flex container that has duplicated content */
 @keyframes ticker {
   0% {
