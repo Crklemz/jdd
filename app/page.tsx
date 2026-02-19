@@ -60,9 +60,9 @@ export default function HomePage() {
         {/* Identity & energy: transparent so neon background shows */}
         <section
           aria-label="About"
-          className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
+          className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-6 sm:py-8 md:py-12 lg:py-16"
         >
-          <div className="mx-auto flex flex-col gap-16 px-4">
+          <div className="mx-auto flex flex-col gap-4 px-4 sm:gap-6 md:gap-10 lg:gap-16">
             <div className="relative z-10 mx-4 max-w-4xl text-center md:mx-auto">
               <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl neon-text-blue text-shadow-neon-blue">
                 {hero.invocation}
@@ -117,7 +117,7 @@ export default function HomePage() {
               imagePaths={scrapbookImagePaths}
               altPrefix={galleryAltPrefix}
             />
-            <div className="space-y-10 text-center">
+            <div className="space-y-6 text-center md:space-y-8 lg:space-y-10">
               <p className="mx-auto max-w-4xl font-display text-2xl italic md:text-3xl neon-text-pink text-shadow-neon-pink">
                 <span className="fancy-underline fancy-underline-neon-rainbow">"{hero.energy1}"</span>
               </p>
