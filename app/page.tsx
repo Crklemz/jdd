@@ -119,10 +119,10 @@ export default function HomePage() {
             />
             <div className="space-y-10 text-center">
               <p className="mx-auto max-w-4xl font-display text-2xl italic md:text-3xl neon-text-pink text-shadow-neon-pink">
-                <span className="fancy-underline fancy-underline-neon-rainbow">{hero.energy1}</span>
+                <span className="fancy-underline fancy-underline-neon-rainbow">"{hero.energy1}"</span>
               </p>
               <p className="mx-auto max-w-2xl font-display text-2xl italic md:text-3xl neon-text-blue text-shadow-neon-blue">
-                <span className="fancy-underline fancy-underline-neon-rainbow">{hero.energy2}</span>
+                <span className="fancy-underline fancy-underline-neon-rainbow">"{hero.energy2}"</span>
               </p>
             </div>
           </div>
