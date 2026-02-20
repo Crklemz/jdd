@@ -33,8 +33,22 @@ export default function HomePage() {
           aria-label="Tagline"
           className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-10 pt-2"
         >
-          <div className="relative z-10 mx-4 max-w-2xl text-center md:mx-auto">
-            <p className="text-lg uppercase tracking-widest neon-text-pink text-shadow-neon-pink">
+          <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center gap-4 px-4 text-center sm:gap-6 md:flex-row md:gap-4">
+            <Image
+              src="/jdd-full-signature.png"
+              alt="Jester Dapper Dan"
+              width={320}
+              height={96}
+              className="order-1 w-full max-w-[240px] sm:max-w-[280px] md:max-w-3xl"
+            />
+            <Image
+              src="/landing-images/1.jpg"
+              alt="jdd profile picture"
+              width={200}
+              height={100}
+              className="order-2 w-full max-w-[160px] rounded-lg sm:max-w-[200px] md:order-3 md:max-w-2xl"
+            />
+            <p className="order-3 text-base uppercase tracking-widest neon-text-pink text-shadow-neon-pink sm:text-lg md:order-2">
               {hero.tagline}
             </p>
           </div>
