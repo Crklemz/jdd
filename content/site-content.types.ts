@@ -6,7 +6,7 @@
 export interface HomeContent {
   hero: {
     tagline: string;
-    invocation: string;
+    invocation: [string, string];
     identity: string;
     identity2: string;
     energy1: string;

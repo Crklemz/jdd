@@ -3,8 +3,10 @@ import type { HomeContent } from "./site-content.types";
 export const homeContent: HomeContent = {
   hero: {
     tagline: "The most fun, creative & exciting merryman in town!",
-    invocation:
-      "Step inside my realm of magic & mischief! I am Jester Dapper Dan – chic, whimsical, effervescent™",
+    invocation: [
+      "Step inside my realm of magic & mischief!",
+      "I am Jester Dapper Dan – chic, whimsical, effervescent™",
+    ],
     identity:
       "I am a fantasy court jester of the 21st century with a Ph.D.",
       identity2:

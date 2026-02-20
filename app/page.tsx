@@ -106,10 +106,13 @@ export default function HomePage() {
           className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
         >
           <div className="mx-auto flex flex-col gap-4 px-4 sm:gap-6 md:gap-10 lg:gap-16">
-            <div className="relative z-10 mx-4 max-w-4xl text-center md:mx-auto">
-              <h1 className="text-4xl font-bold leading-tight md:text-5xl neon-text-blue text-shadow-neon-blue">
-                {hero.invocation}
-              </h1>
+            <div className="relative z-10 mx-1 max-w-4xl space-y-4 text-center md:mx-auto">
+              <p className="text-3xl font-bold leading-tight md:text-5xl lg:text-6xl neon-text-blue text-shadow-neon-blue">
+                {hero.invocation[0]}
+              </p>
+              <p className="text-3xl font-bold leading-tight md:text-5xl lg:text-6xl neon-text-blue text-shadow-neon-blue">
+                {hero.invocation[1]}
+              </p>
             </div>
             <div className="space-y-8 text-center">
               <p className="mx-auto max-w-4xl text-2xl leading-snug text-foreground md:text-3xl">
