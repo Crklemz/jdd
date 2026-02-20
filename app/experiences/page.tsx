@@ -58,6 +58,30 @@ export default function ExperiencesPage() {
             })}
           </div>
         </div>
+        {/* Mobile-only: second event types strip scrolling opposite direction */}
+        <div className="ticker-strip overflow-hidden border-y border-border py-6 md:hidden">
+          <div className="flex w-max gap-12 whitespace-nowrap animate-ticker-reverse">
+            {[...eventTypesList, ...eventTypesList].map((event, i) => {
+              const rainbowClasses = [
+                "neon-text-red text-shadow-neon-red",
+                "neon-text-orange text-shadow-neon-orange",
+                "neon-text-yellow text-shadow-neon-yellow",
+                "neon-text-green text-shadow-neon-green",
+                "neon-text-blue text-shadow-neon-blue",
+                "neon-text-purple text-shadow-neon-purple",
+              ] as const;
+              const colorClass = rainbowClasses[i % rainbowClasses.length];
+              return (
+                <span
+                  key={`${event}-reverse-${i}`}
+                  className={`text-lg ${colorClass}`}
+                >
+                  {event}
+                </span>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
       {/* Realm blurbs - styled like WhyChooseMeCards with text matching border color (nav order: blue, pink, orange, green, purple) */}
