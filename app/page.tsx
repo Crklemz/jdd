@@ -76,7 +76,7 @@ export default function HomePage() {
               height={100}
               className="order-2 w-full max-w-[160px] rounded-lg sm:max-w-[200px] md:order-3 md:max-w-2xl"
             />
-            <p className="order-3 text-base uppercase tracking-widest neon-text-pink text-shadow-neon-pink sm:text-lg md:order-2">
+            <p className="order-3 text-lg uppercase tracking-widest neon-text-pink text-shadow-neon-pink-strong sm:text-xl md:order-2 md:text-2xl">
               {hero.tagline}
             </p>
           </div>
