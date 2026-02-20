@@ -21,9 +21,9 @@ export const aboutContent: AboutContent = {
   ],
   whyChooseHeading: "Why Choose Me?",
   whyChooseItems: [
-    "Unmatched professionalism (uncanny preparation/mindset/I go above & beyond the industry standard)",
-    "Unrivaled creativity (outside the box/left field/avant garde)",
-    "Unparalleled energy (enthusiasm/electricity/presence)",
+    "Unmatched Professionalism (Uncanny Preparation/Mindset/I Go Above & Beyond the Industry Standard)",
+    "Unrivaled Creativity (Outside The Box/Left Field/Avant Garde)",
+    "Unparalleled Energy (Enthusiasm/Electricity/Presence)",
   ],
   testimonialQuotes: [
     "Simply amazing!",
