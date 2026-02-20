@@ -132,30 +132,32 @@ export default function HomePage() {
               <p className="text-center text-xl uppercase tracking-wider neon-text-purple text-shadow-neon-purple md:text-2xl">
                 {skillsHeading}
               </p>
-              <div className="ticker-strip overflow-hidden border-y border-border py-6">
-                <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
-                  {[...skillsList, ...skillsList].map((skill, i) => {
-                    const rainbowClasses = [
-                      "neon-text-red text-shadow-neon-red",
-                      "neon-text-orange text-shadow-neon-orange",
-                      "neon-text-yellow text-shadow-neon-yellow",
-                      "neon-text-green text-shadow-neon-green",
-                      "neon-text-blue text-shadow-neon-blue",
-                      "neon-text-purple text-shadow-neon-purple",
-                    ] as const;
-                    const colorClass = rainbowClasses[i % rainbowClasses.length];
-                    return (
-                      <span
-                        key={`${skill}-${i}`}
-                        className={`text-lg ${colorClass}`}
-                      >
-                        {skill}
-                      </span>
-                    );
-                  })}
-                </div>
-              </div>
             </div>
+          </div>
+          <div className="ticker-strip overflow-hidden border-y border-border py-6">
+            <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+              {[...skillsList, ...skillsList].map((skill, i) => {
+                const rainbowClasses = [
+                  "neon-text-red text-shadow-neon-red",
+                  "neon-text-orange text-shadow-neon-orange",
+                  "neon-text-yellow text-shadow-neon-yellow",
+                  "neon-text-green text-shadow-neon-green",
+                  "neon-text-blue text-shadow-neon-blue",
+                  "neon-text-purple text-shadow-neon-purple",
+                ] as const;
+                const colorClass = rainbowClasses[i % rainbowClasses.length];
+                return (
+                  <span
+                    key={`${skill}-${i}`}
+                    className={`text-lg ${colorClass}`}
+                  >
+                    {skill}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+          <div className="mx-auto flex flex-col gap-4 px-4 sm:gap-6 md:gap-10 lg:gap-16">
             <ScrapbookSection
               imagePaths={scrapbookImagePaths}
               altPrefix={galleryAltPrefix}

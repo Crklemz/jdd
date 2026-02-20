@@ -28,30 +28,35 @@ export default function ExperiencesPage() {
         <p className="mt-4 text-lg text-muted">{introHeading}</p>
       </section>
 
-      {/* Event types ticker */}
-      <div className="ticker-strip overflow-hidden border-y border-border py-6">
-        <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
-          {[...eventTypesList, ...eventTypesList].map((event, i) => {
-            const rainbowClasses = [
-              "neon-text-red text-shadow-neon-red",
-              "neon-text-orange text-shadow-neon-orange",
-              "neon-text-yellow text-shadow-neon-yellow",
-              "neon-text-green text-shadow-neon-green",
-              "neon-text-blue text-shadow-neon-blue",
-              "neon-text-purple text-shadow-neon-purple",
-            ] as const;
-            const colorClass = rainbowClasses[i % rainbowClasses.length];
-            return (
-              <span
-                key={`${event}-${i}`}
-                className={`text-lg ${colorClass}`}
-              >
-                {event}
-              </span>
-            );
-          })}
+      {/* Event types ticker - full-bleed to match home page */}
+      <section
+        aria-label="Event types"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen"
+      >
+        <div className="ticker-strip overflow-hidden border-y border-border py-6">
+          <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+            {[...eventTypesList, ...eventTypesList].map((event, i) => {
+              const rainbowClasses = [
+                "neon-text-red text-shadow-neon-red",
+                "neon-text-orange text-shadow-neon-orange",
+                "neon-text-yellow text-shadow-neon-yellow",
+                "neon-text-green text-shadow-neon-green",
+                "neon-text-blue text-shadow-neon-blue",
+                "neon-text-purple text-shadow-neon-purple",
+              ] as const;
+              const colorClass = rainbowClasses[i % rainbowClasses.length];
+              return (
+                <span
+                  key={`${event}-${i}`}
+                  className={`text-lg ${colorClass}`}
+                >
+                  {event}
+                </span>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Realm blurbs */}
       <section className="space-y-8">
