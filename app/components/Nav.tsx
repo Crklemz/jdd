@@ -17,7 +17,7 @@ export function Nav() {
       className="sticky top-0 z-40 border-b border-border bg-(--background)/95 backdrop-blur"
       aria-label="Main"
     >
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:gap-6">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between px-4 py-4 sm:gap-6">
         <Link
           href="/"
           className="flex items-center gap-3 font-display text-xl font-semibold text-foreground no-underline"
@@ -47,7 +47,7 @@ export function Nav() {
         </Link>
 
         {/* Nav links: always visible (no menu on tablet/mobile) */}
-        <ul className="flex list-none flex-wrap items-center gap-3 sm:gap-6">
+        <ul className="flex min-w-0 list-none flex-1 flex-wrap items-center justify-center gap-3 sm:flex-initial sm:justify-end sm:gap-6">
           {navLinks.map(({ href, label, neonClass }) => (
             <li key={href}>
               <Link
