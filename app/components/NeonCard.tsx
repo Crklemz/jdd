@@ -3,7 +3,7 @@
 import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export type NeonCardVariant = "blue" | "purple" | "magenta" | "green";
+export type NeonCardVariant = "blue" | "purple" | "magenta" | "green" | "pink" | "orange" | "indigo";
 
 export interface NeonCardProps {
   /**
@@ -35,6 +35,15 @@ export interface NeonCardProps {
    * Click handler
    */
   onClick?: () => void;
+  /**
+   * When true, title and description use the same color as the card border (variant)
+   */
+  useVariantColorForText?: boolean;
+  /**
+   * Text size: default (smaller) or large
+   * @default "default"
+   */
+  size?: "default" | "large";
 }
 
 const variantClasses: Record<NeonCardVariant, string> = {
@@ -42,6 +51,9 @@ const variantClasses: Record<NeonCardVariant, string> = {
   purple: "border-neon-purple shadow-neon-purple",
   magenta: "border-neon-magenta shadow-neon-magenta",
   green: "border-neon-green shadow-neon-green",
+  pink: "border-neon-pink shadow-neon-pink",
+  orange: "border-neon-orange shadow-neon-orange",
+  indigo: "border-neon-indigo shadow-neon-indigo",
 };
 
 const iconColorClasses: Record<NeonCardVariant, string> = {
@@ -49,6 +61,9 @@ const iconColorClasses: Record<NeonCardVariant, string> = {
   purple: "text-neon-purple",
   magenta: "text-neon-magenta",
   green: "text-neon-green",
+  pink: "text-neon-pink",
+  orange: "text-neon-orange",
+  indigo: "text-neon-indigo",
 };
 
 /**
@@ -64,7 +79,25 @@ export function NeonCard({
   className,
   children,
   onClick,
+  useVariantColorForText = false,
+  size = "default",
 }: NeonCardProps) {
+  const textColorClass = useVariantColorForText
+    ? iconColorClasses[variant]
+    : "text-foreground";
+  const descriptionColorClass = useVariantColorForText
+    ? cn(iconColorClasses[variant], "opacity-90")
+    : "text-foreground/80";
+
+  const titleSizeClass =
+    size === "large"
+      ? "text-2xl font-semibold mb-2 font-display md:text-3xl"
+      : "text-xl font-semibold mb-2 font-display md:text-2xl";
+  const descriptionSizeClass =
+    size === "large"
+      ? "text-base leading-relaxed mb-4 md:text-lg"
+      : "text-sm leading-relaxed mb-4";
+
   return (
     <div
       className={cn(
@@ -83,12 +116,10 @@ export function NeonCard({
         </div>
       )}
       {title && (
-        <h3 className="text-xl font-semibold text-foreground mb-2 font-display md:text-2xl">
-          {title}
-        </h3>
+        <h3 className={cn(titleSizeClass, textColorClass)}>{title}</h3>
       )}
       {description && (
-        <p className="text-foreground/80 text-sm leading-relaxed mb-4">
+        <p className={cn(descriptionSizeClass, descriptionColorClass)}>
           {description}
         </p>
       )}

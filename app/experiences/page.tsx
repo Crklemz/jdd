@@ -2,7 +2,9 @@
 
 import { experiencesContent } from "@/content";
 import { ScrollGallery } from "../components/ScrollGallery";
+import { NeonCard } from "../components/NeonCard";
 import { useState } from "react";
+import type { NeonCardVariant } from "../components/NeonCard";
 
 export default function ExperiencesPage() {
   const [adultGalleryOpen, setAdultGalleryOpen] = useState(false);
@@ -58,19 +60,21 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
-      {/* Realm blurbs */}
-      <section className="space-y-8">
-        {realmBlurbs.map((realm) => (
-          <div
-            key={realm.title}
-            className="rounded-xl border border-border bg-card p-6"
-          >
-            <h2 className="font-display text-xl font-semibold text-accent">
-              {realm.title}
-            </h2>
-            <p className="mt-2 text-muted">{realm.description}</p>
-          </div>
-        ))}
+      {/* Realm blurbs - styled like WhyChooseMeCards with text matching border color (nav order: blue, pink, orange, green, purple) */}
+      <section className="space-y-6">
+        {realmBlurbs.map((realm, i) => {
+          const variants: NeonCardVariant[] = ["blue", "pink", "orange", "green", "purple"];
+          return (
+            <NeonCard
+              key={realm.title}
+              variant={variants[i % variants.length]}
+              title={realm.title}
+              description={realm.description}
+              useVariantColorForText
+              size="large"
+            />
+          );
+        })}
       </section>
 
       {/* Signature Jester Fantasies */}
