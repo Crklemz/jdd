@@ -212,16 +212,51 @@ export default function HomePage() {
                   {eventTypesIntro}
                 </p>
               </div>
-              <div className="relative z-10 mt-auto w-full overflow-hidden border-y border-b-accent border-t-accent border-border/50 py-4 sm:py-6">
-                <div className="flex w-max gap-6 whitespace-nowrap animate-ticker sm:gap-10">
-                  {[...eventTypesList, ...eventTypesList].map((event, i) => (
-                    <span
-                      key={`${event}-${i}`}
-                      className="font-display text-base italic text-accent sm:text-lg md:text-xl"
-                    >
-                      {event}
-                    </span>
-                  ))}
+              <div className="ticker-strip relative z-10 mt-auto w-full overflow-hidden border-y border-border py-6">
+                <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+                  {[...eventTypesList, ...eventTypesList].map((event, i) => {
+                    const rainbowClasses = [
+                      "neon-text-red text-shadow-neon-red",
+                      "neon-text-orange text-shadow-neon-orange",
+                      "neon-text-yellow text-shadow-neon-yellow",
+                      "neon-text-green text-shadow-neon-green",
+                      "neon-text-blue text-shadow-neon-blue",
+                      "neon-text-purple text-shadow-neon-purple",
+                    ] as const;
+                    const colorClass = rainbowClasses[i % rainbowClasses.length];
+                    return (
+                      <span
+                        key={`${event}-${i}`}
+                        className={`text-lg ${colorClass}`}
+                      >
+                        {event}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+              {/* Mobile-only: second event types strip scrolling opposite direction */}
+              <div className="ticker-strip relative z-10 mt-0 w-full overflow-hidden border-y border-border py-6 md:hidden">
+                <div className="flex w-max gap-12 whitespace-nowrap animate-ticker-reverse">
+                  {[...eventTypesList, ...eventTypesList].map((event, i) => {
+                    const rainbowClasses = [
+                      "neon-text-red text-shadow-neon-red",
+                      "neon-text-orange text-shadow-neon-orange",
+                      "neon-text-yellow text-shadow-neon-yellow",
+                      "neon-text-green text-shadow-neon-green",
+                      "neon-text-blue text-shadow-neon-blue",
+                      "neon-text-purple text-shadow-neon-purple",
+                    ] as const;
+                    const colorClass = rainbowClasses[i % rainbowClasses.length];
+                    return (
+                      <span
+                        key={`${event}-reverse-${i}`}
+                        className={`text-lg ${colorClass}`}
+                      >
+                        {event}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
