@@ -29,15 +29,29 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Event types ticker */}
-      <section className="overflow-hidden border-y border-border py-4">
-        <div className="flex w-max gap-10 whitespace-nowrap animate-ticker-slow">
-          {[...eventTypesList, ...eventTypesList].map((event, i) => (
-            <span key={`${event}-${i}`} className="text-muted">
-              ({event})
-            </span>
-          ))}
+      <div className="ticker-strip overflow-hidden border-y border-border py-6">
+        <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
+          {[...eventTypesList, ...eventTypesList].map((event, i) => {
+            const rainbowClasses = [
+              "neon-text-red text-shadow-neon-red",
+              "neon-text-orange text-shadow-neon-orange",
+              "neon-text-yellow text-shadow-neon-yellow",
+              "neon-text-green text-shadow-neon-green",
+              "neon-text-blue text-shadow-neon-blue",
+              "neon-text-purple text-shadow-neon-purple",
+            ] as const;
+            const colorClass = rainbowClasses[i % rainbowClasses.length];
+            return (
+              <span
+                key={`${event}-${i}`}
+                className={`text-lg ${colorClass}`}
+              >
+                {event}
+              </span>
+            );
+          })}
         </div>
-      </section>
+      </div>
 
       {/* Realm blurbs */}
       <section className="space-y-8">
