@@ -15,7 +15,6 @@ export default function AboutPage() {
     whatSetsApartItems,
     whyChooseHeading,
     whyChooseItems,
-    testimonialQuotes,
     aboutImagePaths,
     signatureVideoPath,
     videoAriaLabel,
@@ -42,9 +41,9 @@ export default function AboutPage() {
         aria-label="Biography"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
-        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4 min-[801px]:flex-row min-[801px]:items-center min-[801px]:gap-16">
-          <div className="min-w-0 flex-1 space-y-6 text-center min-[801px]:text-left">
-            <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple min-[801px]:text-3xl">
+        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4">
+          <div className="min-w-0 flex-1 space-y-6 text-center">
+            <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
               {preJesterHeading}
             </h2>
             <div className="space-y-4 text-muted-foreground">
@@ -55,12 +54,12 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="relative h-72 w-full shrink-0 overflow-hidden rounded-lg border border-border min-[801px]:h-80 min-[801px]:w-80">
+          <div className="relative mx-auto h-72 w-full shrink-0 overflow-hidden rounded-lg md:w-4/5 lg:h-100">
             <Image
               src="/about-images/16.jpg"
               alt=""
               fill
-              className="object-cover"
+              className="object-cover object-[50%_40%]"
               sizes="(max-width: 800px) 100vw, 320px"
             />
           </div>
@@ -72,9 +71,9 @@ export default function AboutPage() {
         aria-label="Becoming Jester Dapper Dan"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
-        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4 min-[801px]:flex-row-reverse min-[801px]:items-center min-[801px]:gap-16">
-          <div className="min-w-0 flex-1 space-y-6 text-center min-[801px]:text-left">
-            <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-blue text-shadow-neon-blue min-[801px]:text-3xl">
+        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4">
+          <div className="min-w-0 flex-1 space-y-6 text-center">
+            <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-blue text-shadow-neon-blue md:text-3xl">
               {becomingHeading}
             </h2>
             <div className="space-y-4 text-muted-foreground">
@@ -85,7 +84,7 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="relative h-72 w-full shrink-0 overflow-hidden rounded-lg border border-border min-[801px]:h-80 min-[801px]:w-80">
+          <div className="relative mx-auto h-72 w-full shrink-0 overflow-hidden rounded-lg md:w-4/5 lg:h-100">
             <Image
               src="/about-images/14.jpeg"
               alt=""
