@@ -46,7 +46,7 @@ export default function AboutPage() {
             <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
               {preJesterHeading}
             </h2>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 px-1 md:px-16 text-muted-foreground">
               {preJesterParagraphs.map((p, i) => (
                 <p key={i} className="text-lg leading-relaxed">
                   {p}
@@ -76,7 +76,7 @@ export default function AboutPage() {
             <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-blue text-shadow-neon-blue md:text-3xl">
               {becomingHeading}
             </h2>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 px-1 md:px-16 text-muted-foreground">
               {becomingParagraphs.map((p, i) => (
                 <p key={i} className="text-lg leading-relaxed">
                   {p}
