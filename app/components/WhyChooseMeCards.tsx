@@ -34,7 +34,7 @@ export function WhyChooseMeCards({ heading, items }: WhyChooseMeCardsProps) {
       className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
     >
       <div className="mx-auto max-w-5xl space-y-10 px-4">
-        <h2 className="text-center font-display text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
+        <h2 className="text-center text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
           {heading}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">

@@ -31,7 +31,7 @@ export default function AboutPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-12"
       >
         <div className="relative z-10 mx-4 max-w-2xl space-y-4 text-center md:mx-auto">
-          <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl neon-text-pink text-shadow-neon-pink">
+          <h1 className="text-4xl font-bold leading-tight md:text-5xl neon-text-pink text-shadow-neon-pink">
             {welcomeHeading}
           </h1>
         </div>
@@ -44,7 +44,7 @@ export default function AboutPage() {
       >
         <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4">
           <div className="min-w-0 flex-1 space-y-6 text-center">
-            <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
+            <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
               {preJesterHeading}
             </h2>
             <div className="space-y-4 px-1 md:px-16 text-muted-foreground">
@@ -74,7 +74,7 @@ export default function AboutPage() {
       >
         <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4">
           <div className="min-w-0 flex-1 space-y-6 text-center">
-            <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-blue text-shadow-neon-blue md:text-3xl">
+            <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-blue text-shadow-neon-blue md:text-3xl">
               {becomingHeading}
             </h2>
             <div className="space-y-4 px-1 md:px-16 text-muted-foreground">
@@ -103,7 +103,7 @@ export default function AboutPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
         <div className="mx-auto max-w-3xl space-y-8 px-4 text-center">
-          <h2 className="font-display text-2xl font-semibold uppercase tracking-wide neon-text-pink text-shadow-neon-pink md:text-3xl">
+          <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-pink text-shadow-neon-pink md:text-3xl">
             {whatSetsApartHeading}
           </h2>
           <ul className="space-y-5 text-left text-muted-foreground">
@@ -176,7 +176,7 @@ export default function AboutPage() {
             href={homeContent.ctaButtonHref}
             className="cta-button-black-neon inline-block rounded-full px-6 py-2.5 no-underline transition hover:opacity-90 sm:px-8 sm:py-3"
           >
-            <span className="cta-rainbow-pulsate-text inline-block font-display text-base font-semibold sm:text-lg">
+            <span className="cta-rainbow-pulsate-text inline-block text-base font-semibold sm:text-lg">
               Book Jester Dapper Dan!
             </span>
           </Link>

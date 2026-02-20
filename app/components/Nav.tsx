@@ -20,7 +20,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between px-4 py-4 sm:gap-6">
         <Link
           href="/"
-          className="flex items-center gap-3 font-display text-xl font-semibold text-foreground no-underline"
+          className="flex items-center gap-3 text-xl font-semibold text-foreground no-underline"
           aria-label="Jester Dapper Dan – Home"
         >
           {/* Jester Dapper Dan signature: tablet and desktop only */}

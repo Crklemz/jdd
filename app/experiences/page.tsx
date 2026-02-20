@@ -24,7 +24,7 @@ export default function ExperiencesPage() {
   return (
     <div className="space-y-16 py-8">
       <section className="text-center">
-        <h1 className="font-display text-4xl font-bold md:text-5xl">
+        <h1 className="text-4xl font-bold md:text-5xl">
           Bookable Realms
         </h1>
         <p className="mt-4 text-lg text-muted">{introHeading}</p>
@@ -79,7 +79,7 @@ export default function ExperiencesPage() {
 
       {/* Signature Jester Fantasies */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-accent">
+        <h2 className="text-2xl font-semibold text-accent">
           {fantasiesHeading}
         </h2>
         <ul className="mt-4 space-y-2">

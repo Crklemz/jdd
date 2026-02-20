@@ -107,15 +107,15 @@ export default function HomePage() {
         >
           <div className="mx-auto flex flex-col gap-4 px-4 sm:gap-6 md:gap-10 lg:gap-16">
             <div className="relative z-10 mx-4 max-w-4xl text-center md:mx-auto">
-              <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl neon-text-blue text-shadow-neon-blue">
+              <h1 className="text-4xl font-bold leading-tight md:text-5xl neon-text-blue text-shadow-neon-blue">
                 {hero.invocation}
               </h1>
             </div>
             <div className="space-y-8 text-center">
-              <p className="mx-auto max-w-4xl font-display text-2xl leading-snug text-foreground md:text-3xl">
+              <p className="mx-auto max-w-4xl text-2xl leading-snug text-foreground md:text-3xl">
                 {hero.identity}
               </p>
-              <p className="mx-auto max-w-4xl font-display text-2xl leading-snug text-foreground md:text-3xl">
+              <p className="mx-auto max-w-4xl text-2xl leading-snug text-foreground md:text-3xl">
                 {hero.identity2}
               </p>
             </div>
@@ -181,7 +181,7 @@ export default function HomePage() {
           <div className="flex w-full flex-col items-stretch gap-0 p-4 sm:p-6 md:p-8 lg:flex-row lg:items-center">
             <div className="order-2 mt-6 flex min-w-0 flex-1 flex-col lg:order-1 lg:mt-0 lg:min-w-4/7 lg:pr-6 xl:pr-8">
               <div className="flex flex-1 flex-col items-center">
-                <p className="font-display mb-4 text-center text-xl text-foreground sm:mb-5 sm:text-2xl md:text-3xl">
+                <p className="mb-4 text-center text-xl text-foreground sm:mb-5 sm:text-2xl md:text-3xl">
                   {eventTypesIntro}
                 </p>
               </div>
@@ -249,7 +249,7 @@ export default function HomePage() {
             href={homeContent.ctaButtonHref}
             className="cta-button-black-neon inline-block rounded-full px-6 py-2.5 no-underline transition hover:opacity-90 sm:px-8 sm:py-3"
           >
-            <span className="cta-rainbow-pulsate-text inline-block font-display text-base font-semibold sm:text-lg">
+            <span className="cta-rainbow-pulsate-text inline-block text-base font-semibold sm:text-lg">
               Book Jester Dapper Dan!
             </span>
           </Link>

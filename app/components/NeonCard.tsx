@@ -91,8 +91,8 @@ export function NeonCard({
 
   const titleSizeClass =
     size === "large"
-      ? "text-2xl font-semibold mb-2 font-display md:text-3xl"
-      : "text-xl font-semibold mb-2 font-display md:text-2xl";
+      ? "text-2xl font-semibold mb-2 md:text-3xl"
+      : "text-xl font-semibold mb-2 md:text-2xl";
   const descriptionSizeClass =
     size === "large"
       ? "text-base leading-relaxed mb-4 md:text-lg"

@@ -10,7 +10,7 @@ export default function BookingPage() {
   return (
     <div className="space-y-16 py-8">
       <section className="text-center">
-        <h1 className="font-display text-4xl font-bold md:text-5xl">
+        <h1 className="text-4xl font-bold md:text-5xl">
           {heading}
         </h1>
         <div className="mx-auto mt-4 max-w-2xl space-y-2 text-muted">
@@ -42,7 +42,7 @@ export default function BookingPage() {
 
       {/* Workflow */}
       <section>
-        <h2 className="font-display text-2xl font-semibold text-accent">
+        <h2 className="text-2xl font-semibold text-accent">
           What to expect
         </h2>
         <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
