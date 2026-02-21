@@ -25,13 +25,13 @@ export default function ExperiencesPage() {
     <div className="relative min-h-screen space-y-0 py-8">
       <section
         aria-label="Bookable Realms"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-2"
+        className="section-hero-glow relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-2 pb-6"
       >
         <div className="relative z-10 mx-auto max-w-2xl px-4 text-center sm:px-6 md:px-8">
-          <h1 className="text-4xl font-bold md:text-5xl">
+          <h1 className="text-4xl font-bold md:text-5xl neon-text-purple text-shadow-neon-purple">
             Bookable Realms
           </h1>
-          <p className="mt-4 text-lg text-muted">{introHeading}</p>
+          <p className="mt-4 text-lg text-muted-foreground">{introHeading}</p>
         </div>
       </section>
 

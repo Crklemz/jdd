@@ -1,7 +1,7 @@
 import type { BookingContent } from "./site-content.types";
 
 export const bookingContent: BookingContent = {
-  heading: "Ready to start your own fantasy journey with me?",
+  heading: "Ready To Start Your Own Fantasy Journey With Me?",
   introParagraphs: [
     "Complete my booking inquiry form below so I can tailor my act to make your event an unforgettable experience.",
     "I will return your inquiry within 3 business days. Thank you and stay tuned!",
