@@ -211,26 +211,6 @@ body {
     0 0 40px rgba(140, 0, 220, 0.4);
 }
 
-/* Soft circular glow behind hero-style page sections (e.g. experiences, booking) */
-.section-hero-glow {
-  position: relative;
-}
-.section-hero-glow::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: min(100vw, 720px);
-  height: 280px;
-  border-radius: 50%;
-  box-shadow:
-    0 0 80px rgba(191, 0, 255, 0.12),
-    0 0 140px rgba(0, 212, 255, 0.08);
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* Scrolling ticker - apply to inner flex container that has duplicated content */
 @keyframes ticker {
   0% {
