@@ -102,24 +102,36 @@ export default function AboutPage() {
         aria-label="What sets me apart"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
       >
-        <div className="mx-auto max-w-3xl space-y-8 px-4 text-center">
-          <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-pink text-shadow-neon-pink md:text-3xl">
-            {whatSetsApartHeading}
-          </h2>
-          <ul className="space-y-5 text-left text-muted-foreground">
-            {whatSetsApartItems.map((item, i) => (
-              <li key={i} className="flex gap-3 text-lg leading-relaxed">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-                <span className="underline">{item}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="mx-auto flex max-w-5xl flex-col gap-12 px-4">
+          <div className="relative mx-auto h-72 w-full shrink-0 overflow-hidden rounded-lg md:w-4/5 lg:h-100">
+            <Image
+              src="/about-images/12.JPG"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 800px) 100vw, 320px"
+            />
+          </div>
+          <div className="max-w-3xl mx-auto w-full space-y-8 text-center">
+            <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-pink text-shadow-neon-pink md:text-3xl">
+              {whatSetsApartHeading}
+            </h2>
+            <ul className="space-y-5 text-left text-muted-foreground">
+              {whatSetsApartItems.map((item, i) => (
+                <li key={i} className="flex gap-3 text-lg leading-relaxed">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+                  <span className="underline">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
       <WhyChooseMeCards
         heading={whyChooseHeading}
         items={whyChooseItems}
+        imagePath="/about-images/21.jpg"
       />
 
       {/* Testimonials */}

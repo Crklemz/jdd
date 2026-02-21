@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Briefcase, Sparkles, Zap } from "lucide-react";
 import { NeonCard } from "./NeonCard";
 import { FadeInOnScroll } from "./FadeInOnScroll";
@@ -11,6 +12,7 @@ const ICONS = [Briefcase, Sparkles, Zap];
 export interface WhyChooseMeCardsProps {
   heading: string;
   items: string[];
+  imagePath?: string;
 }
 
 function parseItem(item: string): { title: string; description: string | null } {
@@ -27,31 +29,44 @@ function parseItem(item: string): { title: string; description: string | null } 
   return { title, description };
 }
 
-export function WhyChooseMeCards({ heading, items }: WhyChooseMeCardsProps) {
+export function WhyChooseMeCards({ heading, items, imagePath }: WhyChooseMeCardsProps) {
   return (
     <section
       aria-label="Why choose me"
       className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
     >
-      <div className="mx-auto max-w-5xl space-y-10 px-4">
-        <h2 className="text-center text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
-          {heading}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {items.map((item, i) => {
-            const { title, description } = parseItem(item);
-            const Icon = ICONS[i % ICONS.length];
-            return (
-              <FadeInOnScroll key={`${item}-${i}`} delay={i * 100}>
-                <NeonCard
-                  variant={VARIANTS[i % VARIANTS.length]}
-                  title={title}
-                  description={description ?? undefined}
-                  icon={Icon}
-                />
-              </FadeInOnScroll>
-            );
-          })}
+      <div className="mx-auto flex max-w-5xl flex-col gap-12 px-4">
+        {imagePath && (
+          <div className="relative mx-auto h-72 w-full shrink-0 overflow-hidden rounded-lg md:w-4/5 lg:h-100">
+            <Image
+              src={imagePath}
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 800px) 100vw, 320px"
+            />
+          </div>
+        )}
+        <div className="space-y-10">
+          <h2 className="text-center text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
+            {heading}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {items.map((item, i) => {
+              const { title, description } = parseItem(item);
+              const Icon = ICONS[i % ICONS.length];
+              return (
+                <FadeInOnScroll key={`${item}-${i}`} delay={i * 100}>
+                  <NeonCard
+                    variant={VARIANTS[i % VARIANTS.length]}
+                    title={title}
+                    description={description ?? undefined}
+                    icon={Icon}
+                  />
+                </FadeInOnScroll>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
