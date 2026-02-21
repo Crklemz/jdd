@@ -114,7 +114,7 @@ export default function HomePage() {
                 {hero.invocation[1]}
               </p>
             </div>
-            <div className="space-y-8 text-center">
+            <div className="space-y-8 mb-8 lg:mb-0 text-center">
               <p className="mx-auto max-w-4xl text-2xl leading-snug text-foreground md:text-3xl">
                 {hero.identity}
               </p>
