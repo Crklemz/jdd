@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { aboutContent, homeContent } from "@/content";
 import { HeroVideo } from "../components/HeroVideo";
-import { ScrollGallery } from "../components/ScrollGallery";
 import { WhyChooseMeCards } from "../components/WhyChooseMeCards";
 import Link from "next/link";
 
@@ -16,11 +15,9 @@ export default function AboutPage() {
     whatSetsApartItems,
     whyChooseHeading,
     whyChooseItems,
-    aboutImagePaths,
     signatureVideoPath,
     videoAriaLabel,
     videoAspectRatio,
-    galleryAltPrefix,
   } = aboutContent;
 
   return (
@@ -117,12 +114,20 @@ export default function AboutPage() {
               {whatSetsApartHeading}
             </h2>
             <ul className="space-y-5 text-left text-muted-foreground">
-              {whatSetsApartItems.map((item, i) => (
-                <li key={i} className="flex gap-3 text-lg leading-relaxed">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-                  <span className="underline">{item}</span>
-                </li>
-              ))}
+              {whatSetsApartItems.map((item, i) => {
+                const colonIndex = item.indexOf(":");
+                const label = colonIndex >= 0 ? item.slice(0, colonIndex) : item;
+                const description = colonIndex >= 0 ? item.slice(colonIndex).trimStart() : "";
+                return (
+                  <li key={i} className="flex gap-3 text-lg leading-relaxed">
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+                    <span>
+                      <span className="underline">{label}</span>
+                      {description ? `${description}` : null}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -143,24 +148,6 @@ export default function AboutPage() {
           <ScatteredTestimonials quotes={testimonialQuotes} />
         </div>
       </section> */}
-
-      {/* Two scrolling galleries (pictures 12–21) */}
-      <section aria-label="Gallery" className="relative overflow-hidden py-8">
-        <div className="mx-auto max-w-6xl space-y-2 px-4">
-          <ScrollGallery
-            imagePaths={aboutImagePaths.slice(0, 5)}
-            altPrefix={galleryAltPrefix}
-            className="mb-4"
-            scrollDurationSeconds={65}
-            direction="ltr"
-          />
-          <ScrollGallery
-            imagePaths={aboutImagePaths.slice(5, 10)}
-            altPrefix={galleryAltPrefix}
-            scrollDurationSeconds={70}
-          />
-        </div>
-      </section>
 
       {/* Signature video (same styling as home page: full-bleed, 100% mobile/tablet, 80vw desktop) */}
       <section
