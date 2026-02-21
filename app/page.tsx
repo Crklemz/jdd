@@ -103,7 +103,7 @@ export default function HomePage() {
         {/* Identity & energy: transparent so neon background shows */}
         <section
           aria-label="About"
-          className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-6 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
+          className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-1 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
         >
           <div className="mx-auto flex flex-col gap-4 px-4 sm:gap-6 md:gap-10 lg:gap-16">
             <div className="relative z-10 mx-1 max-w-4xl space-y-4 text-center md:mx-auto">
