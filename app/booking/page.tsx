@@ -20,6 +20,18 @@ export default function BookingPage() {
         </div>
       </section>
 
+      {/* Workflow */}
+      <section>
+        <h2 className="text-2xl font-semibold text-accent">
+          What to expect
+        </h2>
+        <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
+          {workflowSteps.map((step, i) => (
+            <li key={i}>{step}</li>
+          ))}
+        </ol>
+      </section>
+
       {/* Booking form - Tally embed */}
       <section id="inquiry" className="min-h-[400px]">
         {TALLY_FORM_URL ? (
@@ -38,18 +50,6 @@ export default function BookingPage() {
             </p>
           </div>
         )}
-      </section>
-
-      {/* Workflow */}
-      <section>
-        <h2 className="text-2xl font-semibold text-accent">
-          What to expect
-        </h2>
-        <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
-          {workflowSteps.map((step, i) => (
-            <li key={i}>{step}</li>
-          ))}
-        </ol>
       </section>
 
       {/* Gallery */}
