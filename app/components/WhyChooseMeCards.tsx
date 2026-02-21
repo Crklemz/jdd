@@ -33,9 +33,9 @@ export function WhyChooseMeCards({ heading, items, imagePath }: WhyChooseMeCards
   return (
     <section
       aria-label="Why choose me"
-      className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
+      className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-1 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
     >
-      <div className="mx-auto flex max-w-5xl flex-col gap-12 px-4">
+      <div className="mx-auto flex max-w-5xl flex-col gap-12 px-4 sm:px-6 md:px-8">
         {imagePath && (
           <div className="relative mx-auto h-72 w-full shrink-0 overflow-hidden rounded-lg md:w-4/5 lg:h-100">
             <Image

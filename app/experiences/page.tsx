@@ -22,18 +22,23 @@ export default function ExperiencesPage() {
   } = experiencesContent;
 
   return (
-    <div className="space-y-16 py-8">
-      <section className="text-center">
-        <h1 className="text-4xl font-bold md:text-5xl">
-          Bookable Realms
-        </h1>
-        <p className="mt-4 text-lg text-muted">{introHeading}</p>
+    <div className="relative min-h-screen space-y-0 py-8">
+      <section
+        aria-label="Bookable Realms"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-10 pt-2"
+      >
+        <div className="relative z-10 mx-auto max-w-2xl px-4 text-center sm:px-6 md:px-8">
+          <h1 className="text-4xl font-bold md:text-5xl">
+            Bookable Realms
+          </h1>
+          <p className="mt-4 text-lg text-muted">{introHeading}</p>
+        </div>
       </section>
 
       {/* Event types ticker - full-bleed to match home page */}
       <section
         aria-label="Event types"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-12 w-screen md:mt-10 lg:mt-8"
       >
         <div className="ticker-strip overflow-hidden border-y border-border py-6">
           <div className="flex w-max gap-12 whitespace-nowrap animate-ticker">
@@ -85,7 +90,7 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Realm blurbs - styled like WhyChooseMeCards with text matching border color (nav order: blue, pink, orange, green, purple) */}
-      <section className="space-y-6">
+      <section className="mt-12 space-y-6 px-4 sm:px-6 md:px-8 md:mt-10 lg:mt-8">
         {realmBlurbs.map((realm, i) => {
           const variants: NeonCardVariant[] = ["blue", "pink", "orange", "green", "purple"];
           return (
@@ -102,27 +107,29 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Signature Jester Fantasies */}
-      <section>
-        <h2 className="text-2xl font-semibold text-accent">
-          {fantasiesHeading}
-        </h2>
-        <ul className="mt-4 space-y-2">
-          {jesterFantasies.map((fantasy) => (
-            <li key={fantasy.name} className="text-foreground">
-              <span className="font-medium">{fantasy.name}</span>
-              {fantasy.tags.length > 0 && (
-                <span className="ml-2 text-sm text-muted">
-                  (Tags: {fantasy.tags.join(" / ")})
-                </span>
-              )}
-            </li>
-          ))}
-        </ul>
-        <p className="mt-4 italic text-muted">{customFantasiesNote}</p>
+      <section className="mt-12 px-4 sm:px-6 md:px-8 md:mt-10 lg:mt-8">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-2xl font-semibold text-accent">
+            {fantasiesHeading}
+          </h2>
+          <ul className="mt-4 space-y-2">
+            {jesterFantasies.map((fantasy) => (
+              <li key={fantasy.name} className="text-foreground">
+                <span className="font-medium">{fantasy.name}</span>
+                {fantasy.tags.length > 0 && (
+                  <span className="ml-2 text-sm text-muted">
+                    (Tags: {fantasy.tags.join(" / ")})
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 italic text-muted">{customFantasiesNote}</p>
+        </div>
       </section>
 
       {/* Fantasy + Children's galleries */}
-      <section aria-label="Gallery">
+      <section aria-label="Gallery" className="mt-8 px-4 md:mt-10 md:px-6 lg:mt-12">
         <ScrollGallery
           imagePaths={fantasyImagePaths}
           altPrefix="Jester fantasy"

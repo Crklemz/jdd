@@ -25,7 +25,7 @@ export default function AboutPage() {
       {/* Welcome */}
       <section
         aria-label="Welcome"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-12"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen"
       >
         <div className="relative z-10 mx-4 max-w-2xl space-y-4 text-center md:mx-auto">
           <h1 className="text-4xl font-bold leading-tight md:text-5xl neon-text-pink text-shadow-neon-pink">
@@ -37,9 +37,9 @@ export default function AboutPage() {
       {/* Pre-jester biography + image */}
       <section
         aria-label="Biography"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-1 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
       >
-        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4">
+        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4 sm:px-6 md:px-8">
           <div className="min-w-0 flex-1 space-y-6 text-center">
             <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
               {preJesterHeading}
@@ -67,9 +67,9 @@ export default function AboutPage() {
       {/* Becoming Jester Dapper Dan + image */}
       <section
         aria-label="Becoming Jester Dapper Dan"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-1 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
       >
-        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4">
+        <div className="mx-auto flex max-w-5xl flex-col-reverse gap-12 px-4 sm:px-6 md:px-8">
           <div className="min-w-0 flex-1 space-y-6 text-center">
             <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-blue text-shadow-neon-blue md:text-3xl">
               {becomingHeading}
@@ -97,9 +97,9 @@ export default function AboutPage() {
       {/* What sets me apart */}
       <section
         aria-label="What sets me apart"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-16"
+        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-1 sm:pt-8 sm:pb-8 md:pt-12 md:pb-10 lg:pt-16 lg:pb-8"
       >
-        <div className="mx-auto flex max-w-5xl flex-col gap-12 px-4">
+        <div className="mx-auto flex max-w-5xl flex-col gap-12 px-4 sm:px-6 md:px-8">
           <div className="relative mx-auto h-72 w-full shrink-0 overflow-hidden rounded-lg md:w-4/5 lg:h-100">
             <Image
               src="/about-images/12.JPG"
@@ -152,7 +152,7 @@ export default function AboutPage() {
       {/* Signature video (same styling as home page: full-bleed, 100% mobile/tablet, 80vw desktop) */}
       <section
         aria-label="Introduction video"
-        className="relative left-1/2 right-1/2 flex -ml-[50vw] -mr-[50vw] w-screen justify-center px-4 pt-8 pb-16 lg:px-0"
+        className="relative left-1/2 right-1/2 flex -ml-[50vw] -mr-[50vw] w-screen justify-center px-4 pt-8 pb-8 lg:px-0"
       >
         <div
           className="relative w-full lg:w-[70vw] lg:max-w-[70vw]"
