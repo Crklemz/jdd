@@ -28,7 +28,7 @@ export default function BookingPage() {
       {/* Workflow */}
       <section
         aria-label="What to expect"
-        className="px-4 md:px-4 md:mt-6 lg:mt-8"
+        className="px-4 md:px-4 md:mt-6 lg:mt-8 md:ml-20 lg:ml-40"
       >
         <div className="mx-auto max-w-4xl">
           <h2 className="text-2xl font-semibold text-accent">
