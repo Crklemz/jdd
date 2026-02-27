@@ -38,12 +38,18 @@ export default function ConsultingPage() {
           <h1 className="text-4xl font-bold md:text-5xl neon-text-blue text-shadow-neon-blue">
             {welcomeHeading}
           </h1>
-          <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg mt-6" alt="Entertainment Solutions consulting" />
+          <Image
+            src="/es-logo.png"
+            width={1000}
+            height={1000}
+            className="rounded-lg mt-6"
+            alt="Entertainment Solutions consulting"
+          />
 
           <p className="mx-auto tracking-wider uppercase neon-text-pink text-shadow-neon-pink mt-6 text-lg text-muted-foreground">
             {introParagraph}
           </p>
-          <ul className="mx-auto mt-6 list-inside space-y-2 text-left text-muted-foreground sm:max-w-xl sm:list-disc">
+          <ul className="mx-auto mt-6 list-inside tracking-wide space-y-2 text-left text-muted-foreground sm:max-w-xl sm:list-disc">
             {questionBullets.map((bullet, i) => (
               <li key={i}>{bullet}</li>
             ))}
@@ -56,11 +62,6 @@ export default function ConsultingPage() {
         aria-label="The problem"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-8 sm:px-6 md:px-8"
       >
-        <div className="relative z-10 mx-auto max-w-2xl text-center">
-          <p className="text-lg font-medium leading-relaxed neon-text-green text-shadow-neon-green md:text-xl">
-            {problemStatement}
-          </p>
-        </div>
       </section>
 
       {/* Entertainment Science intro */}
@@ -69,11 +70,25 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-8 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-4xl space-y-6 text-center text-muted-foreground">
-        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg" alt="Entertainment Solutions consulting" />
-
+        <Image
+            src="/landing-images/10.jpg"
+            width={1000}
+            height={1000}
+            className="rounded-lg"
+            alt="Entertainment Solutions consulting"
+          />
+                    <p className="text-lg font-medium leading-relaxed neon-text-green text-shadow-neon-green md:text-xl">
+            {problemStatement}
+          </p>
           <p className="text-lg leading-relaxed">{entertainmentScienceIntro}</p>
           <p className="text-lg leading-relaxed">{credentialsParagraph}</p>
-          <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg" alt="Entertainment Solutions consulting" />
+          <Image
+            src="/about-images/12.jpg"
+            width={1000}
+            height={1000}
+            className="rounded-lg"
+            alt="Entertainment Solutions consulting"
+          />
 
           <blockquote className="font-display text-xl italic neon-text-yellow text-shadow-neon-yellow md:text-2xl">
             &ldquo;{signatureQuote}&rdquo;
@@ -88,8 +103,13 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-4xl">
-        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg mb-6" alt="Entertainment Solutions consulting" />
-
+        <Image
+            src="/exp-images/Fantasy/41.jpg"
+            width={1000}
+            height={1000}
+            className="rounded-lg mb-6"
+            alt="Entertainment Solutions consulting"
+          />
           <h2 className="text-center text-2xl font-semibold uppercase tracking-wide neon-text-purple text-shadow-neon-purple md:text-3xl">
             {signaturePackageHeading}
           </h2>
@@ -150,8 +170,13 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-4xl">
-        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg mb-10" alt="Entertainment Solutions consulting" />
-
+        <Image
+            src="/consulting-hero.png"
+            width={1000}
+            height={1000}
+            className="rounded-lg mb-10"
+            alt="Entertainment Solutions consulting"
+          />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {valueBoxes.map((box, i) => (
               <NeonCard
@@ -164,7 +189,7 @@ export default function ConsultingPage() {
               />
             ))}
           </div>
-          <p className="mx-auto neon-text-blue text-shadow-neon-blue text-xl mt-8 max-w-2xl text-center text-muted-foreground">
+          <p className="mx-auto neon-text-blue text-shadow-neon-blue text-xl lg:text-2xl mt-8 max-w-2xl text-center text-muted-foreground">
             {customPackagesNote}
           </p>
         </div>
@@ -176,8 +201,13 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg mb-8" alt="Entertainment Solutions consulting" />
-
+        {/* <Image
+            src="/consulting-hero.png"
+            width={1000}
+            height={1000}
+            className="rounded-lg mb-8"
+            alt="Entertainment Solutions consulting"
+          /> */}
           <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-green text-shadow-neon-green md:text-3xl">
             {comingSoonHeading}
           </h2>
