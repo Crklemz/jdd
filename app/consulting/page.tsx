@@ -49,19 +49,12 @@ export default function ConsultingPage() {
           <p className="mx-auto tracking-wider uppercase neon-text-pink text-shadow-neon-pink mt-6 text-lg text-muted-foreground">
             {introParagraph}
           </p>
-          <ul className="mx-auto mt-6 list-inside tracking-wide space-y-2 text-left text-muted-foreground sm:max-w-xl sm:list-disc">
+          <ul className="mx-auto mt-6 list-inside tracking-wide space-y-2 md:text-left text-muted-foreground sm:max-w-xl sm:list-disc">
             {questionBullets.map((bullet, i) => (
               <li key={i}>{bullet}</li>
             ))}
           </ul>
         </div>  
-      </section>
-
-      {/* Problem statement */}
-      <section
-        aria-label="The problem"
-        className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-8 sm:px-6 md:px-8"
-      >
       </section>
 
       {/* Entertainment Science intro */}
