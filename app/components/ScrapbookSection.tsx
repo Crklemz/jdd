@@ -7,8 +7,8 @@ const NEON_FRAME_CLASSES = [
   "scrapbook-frame-neon-purple",
   "scrapbook-frame-neon-magenta",
   "scrapbook-frame-neon-green",
-  "scrapbook-frame-neon-orange",
   "scrapbook-frame-neon-indigo",
+  "scrapbook-frame-neon-orange",
 ] as const;
 
 /** Spread-out scrapbook: mobile, md, then lg+ (laptop/desktop) for more spread and size */
