@@ -133,6 +133,17 @@ body {
   color: #ffea00 !important;
 }
 
+.neon-text-coral {
+  color: #ff5099 !important;
+}
+
+.text-shadow-neon-coral {
+  text-shadow:
+    0 0 10px rgba(255, 80, 106, 0.8),
+    0 0 20px rgba(255, 140, 100, 0.5),
+    0 0 40px rgba(255, 150, 120, 0.3);
+}
+
 .text-shadow-neon-yellow {
   text-shadow:
     0 0 10px rgba(255, 234, 0, 0.8),

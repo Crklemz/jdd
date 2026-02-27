@@ -68,7 +68,8 @@ export type FantasyNeonColor =
   | "neon-text-pink text-shadow-neon-pink"
   | "neon-text-indigo text-shadow-neon-indigo"
   | "neon-text-magenta text-shadow-neon-magenta"
-  | "neon-text-cyan text-shadow-neon-cyan";
+  | "neon-text-cyan text-shadow-neon-cyan"
+  | "neon-text-coral text-shadow-neon-coral";
 
 export interface JesterFantasy {
   name: string;
