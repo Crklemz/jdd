@@ -62,6 +62,7 @@ export function WhyChooseMeCards({ heading, items, imagePath }: WhyChooseMeCards
                     title={title}
                     description={description ?? undefined}
                     icon={Icon}
+                    className="text-center"
                   />
                 </FadeInOnScroll>
               );

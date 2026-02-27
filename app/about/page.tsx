@@ -116,8 +116,15 @@ export default function AboutPage() {
                 const colonIndex = item.indexOf(":");
                 const label = colonIndex >= 0 ? item.slice(0, colonIndex) : item;
                 const description = colonIndex >= 0 ? item.slice(colonIndex).trimStart() : "";
+                const entryColors = [
+                  "neon-text-blue",
+                  "neon-text-purple",
+                  "neon-text-orange",
+                  "neon-text-green",
+                ] as const;
+                const colorClass = entryColors[i % entryColors.length];
                 return (
-                  <li key={i} className="flex gap-3 text-lg leading-relaxed">
+                  <li key={i} className={`flex gap-3 text-lg leading-relaxed ${colorClass}`}>
                     <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
                     <span>
                       <span className="underline">{label}</span>

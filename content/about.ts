@@ -10,7 +10,8 @@ export const aboutContent: AboutContent = {
   becomingHeading: "Becoming Jester Dapper Dan",
   becomingParagraphs: [
     "Since then I changed my name, launched two recurring fantasy nightlife experiences (Lust X & AfterGlow) and discovered many & more passions and callings.",
-    "My signature act fuses the style, charm & wit of medieval court jesters with modern elements, leaving audiences enthralled with laughter and wonder. I captivate crowds with my signature 'whimsical elegance' style, contagious energy and magnetic presence.",
+    "My signature act fuses the style, charm & wit of medieval court jesters with modern elements, leaving audiences enthralled with laughter and wonder.",
+    "I captivate crowds with my signature 'whimsical elegance' style, contagious energy and magnetic presence.",
   ],
   whatSetsApartHeading: "What Sets Me Apart?",
   whatSetsApartItems: [
