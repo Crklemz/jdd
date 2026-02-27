@@ -3,7 +3,7 @@ import type { ConsultingContent } from "./site-content.types";
 export const consultingContent: ConsultingContent = {
   welcomeHeading: "Welcome to Entertainment Solutions",
   introParagraph:
-    "My expert event strategic & consulting services.",
+    "My expert event strategic & consulting services",
   questionBullets: [
     "Are your goals or vision not being fully realized by your event?",
     "Are you in need of expert strategic advice to launch?",
@@ -16,7 +16,7 @@ export const consultingContent: ConsultingContent = {
   credentialsParagraph:
     "I have produced more than 50 successful events, built 2 communities from the ground up (Lust X & AfterGlow), and attended more than 1000 events. My experience gives me broad intuition & insight of what is going right and wrong when I enter a room.",
   signatureQuote:
-    "Your event's success is determined before the first guest walks in.",
+    "Your event's success is determined before the first guest walks in",
   credentialsParagraph2:
     "I have seen many events fail to reach their full potential or goals because of creative limitations, execution missteps, technical problems, or lack of structure. With Entertainment Science we identify, troubleshoot & rectify these problems to make your event shine.",
   signaturePackageHeading: "My signature package experience:",
@@ -78,7 +78,7 @@ export const consultingContent: ConsultingContent = {
         "Data-informed strategy rooted in 50+ produced events and 1000+ lived experiences.",
     },
   ],
-  customPackagesNote: "Custom strategic packages are available upon request.",
+  customPackagesNote: "Custom strategic packages are available upon request",
   comingSoonHeading:
     "Coming Soon! Transformational consulting services in:",
   comingSoonItems: [

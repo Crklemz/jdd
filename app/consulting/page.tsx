@@ -34,13 +34,13 @@ export default function ConsultingPage() {
         aria-label="Consulting"
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-4 sm:px-6 md:px-8 w-screen pb-10 pt-2"
       >
-        <div className="relative z-10 mx-auto max-w-4xl  text-center ">
+        <div className="relative z-10 mx-auto max-w-4xl text-center ">
           <h1 className="text-4xl font-bold md:text-5xl neon-text-green text-shadow-neon-green">
             {welcomeHeading}
           </h1>
           <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg mt-6" alt="Entertainment Solutions consulting" />
 
-          <p className="mx-auto mt-6 text-lg text-muted-foreground">
+          <p className="mx-auto tracking-wider uppercase mt-6 text-lg text-muted-foreground">
             {introParagraph}
           </p>
           <ul className="mx-auto mt-6 list-inside space-y-2 text-left text-muted-foreground sm:max-w-xl sm:list-disc">
@@ -150,7 +150,7 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-4xl">
-        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg" alt="Entertainment Solutions consulting" />
+        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg mb-10" alt="Entertainment Solutions consulting" />
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {valueBoxes.map((box, i) => (
@@ -176,7 +176,7 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg" alt="Entertainment Solutions consulting" />
+        <Image src='/about-images/21.jpg' width={1000} height={1000} className="rounded-lg mb-8" alt="Entertainment Solutions consulting" />
 
           <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-green text-shadow-neon-green md:text-3xl">
             {comingSoonHeading}
