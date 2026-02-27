@@ -7,6 +7,10 @@ interface ScrollGalleryProps {
   imageClassName?: string;
   /** Indices of images to crop slightly lower (e.g. so faces aren't cut off). */
   lowerCropIndices?: number[];
+  /** Indices of images to anchor at top (so the top of the image isn't cut off). */
+  topCropIndices?: number[];
+  /** Override object-position per image index (e.g. { 9: "center 25%" }). Takes precedence over lower/top crop. */
+  positionByIndex?: Partial<Record<number, string>>;
   /** Duration in seconds for one full cycle (lower = faster). Top gallery typically faster than bottom. */
   scrollDurationSeconds?: number;
   /** Scroll direction: "rtl" = right-to-left (default), "ltr" = left-to-right */
@@ -19,6 +23,8 @@ export function ScrollGallery({
   className = "",
   imageClassName = "",
   lowerCropIndices,
+  topCropIndices,
+  positionByIndex,
   scrollDurationSeconds = 60,
   direction = "rtl",
 }: ScrollGalleryProps) {
@@ -35,7 +41,16 @@ export function ScrollGallery({
       >
         {duplicatedPaths.map((src, i) => {
           const pathIndex = i % imagePaths.length;
+          const customPos = positionByIndex?.[pathIndex];
           const shiftDown = lowerCropIndices?.includes(pathIndex);
+          const anchorTop = topCropIndices?.includes(pathIndex);
+          const objectPosition = customPos
+            ? customPos
+            : shiftDown
+              ? "center 20%"
+              : anchorTop
+                ? "center top"
+                : undefined;
           return (
             <div
               key={`${src}-${i}`}
@@ -46,7 +61,7 @@ export function ScrollGallery({
                 alt={`${altPrefix} ${pathIndex + 1}`}
                 fill
                 className={`object-cover ${imageClassName}`}
-                style={shiftDown ? { objectPosition: "center 20%" } : undefined}
+                style={objectPosition ? { objectPosition } : undefined}
                 sizes="(max-width: 640px) 220px, 280px"
               />
             </div>

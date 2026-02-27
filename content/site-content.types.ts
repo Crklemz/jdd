@@ -57,9 +57,26 @@ export interface RealmBlurb {
   description: string;
 }
 
+/** Neon text + shadow class pair for fantasy list styling (e.g. "neon-text-red text-shadow-neon-red") */
+export type FantasyNeonColor =
+  | "neon-text-red text-shadow-neon-red"
+  | "neon-text-orange text-shadow-neon-orange"
+  | "neon-text-yellow text-shadow-neon-yellow"
+  | "neon-text-green text-shadow-neon-green"
+  | "neon-text-blue text-shadow-neon-blue"
+  | "neon-text-purple text-shadow-neon-purple"
+  | "neon-text-pink text-shadow-neon-pink"
+  | "neon-text-indigo text-shadow-neon-indigo"
+  | "neon-text-magenta text-shadow-neon-magenta"
+  | "neon-text-cyan text-shadow-neon-cyan";
+
 export interface JesterFantasy {
   name: string;
   tags: string[];
+  /** Optional image paths shown below this fantasy (e.g. /landing-images/2.jpg). */
+  imagePaths?: string[];
+  /** Neon color class string for this entry. */
+  color: FantasyNeonColor;
 }
 
 export interface ExperiencesContent {

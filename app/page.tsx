@@ -298,7 +298,7 @@ export default function HomePage() {
                 imagePaths={landingImagePaths.slice(6, 11)}
                 altPrefix={galleryAltPrefix}
                 scrollDurationSeconds={25}
-                lowerCropIndices={[1, 2]}
+                topCropIndices={[1, 2]}
               />
             </div>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { experiencesContent } from "@/content";
 import { ScrollGallery } from "../components/ScrollGallery";
 import { NeonCard } from "../components/NeonCard";
@@ -109,23 +110,60 @@ export default function ExperiencesPage() {
 
       {/* Signature Jester Fantasies */}
       <section className="mt-12 px-4 sm:px-6 md:px-8 md:mt-10 lg:mt-8">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="text-2xl font-semibold text-accent">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl font-semibold text-accent md:text-3xl">
             {fantasiesHeading}
           </h2>
-          <ul className="mt-4 space-y-2">
+          <p className="mt-2 text-lg font-medium text-foreground md:text-xl">
+            {customFantasiesNote}
+          </p>
+          <ul className="mt-8 space-y-8 text-left">
             {jesterFantasies.map((fantasy) => (
-              <li key={fantasy.name} className="text-foreground">
-                <span className="font-medium">{fantasy.name}</span>
-                {fantasy.tags.length > 0 && (
-                  <span className="ml-2 text-sm text-muted">
-                    (Tags: {fantasy.tags.join(" / ")})
+              <li key={fantasy.name}>
+                <div className="text-foreground">
+                  <span className={`text-lg font-semibold ${fantasy.color}`}>
+                    {fantasy.name}
                   </span>
+                  {fantasy.tags.length > 0 && (
+                    <span className="ml-2 text-sm text-muted">
+                      (Tags: {fantasy.tags.join(" / ")})
+                    </span>
+                  )}
+                </div>
+                {fantasy.imagePaths && fantasy.imagePaths.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-3">
+                    {fantasy.imagePaths.map((src) => {
+                      const anchorTop =
+                        "/exp-images/Childrens/33.jpg" === src ||
+                        "/exp-images/Fantasy/51.jpg" === src ||
+                        "/landing-images/8.jpg" === src ||
+                        "/about-images/18.jpg" === src ||
+                        "/landing-images/9.jpg" === src;
+                      const anchorSlightTop = "/exp-images/Fantasy/48.jpg" === src;
+                      const objectPosition = anchorSlightTop
+                        ? "center 25%"
+                        : undefined;
+                      return (
+                        <div
+                          key={src}
+                          className="relative h-40 w-40 shrink-0 overflow-hidden rounded-lg sm:h-48 sm:w-48"
+                        >
+                          <Image
+                            src={src}
+                            alt={fantasy.name}
+                            fill
+                            className={`object-cover ${anchorTop ? "object-top" : ""}`}
+                            style={objectPosition ? { objectPosition } : undefined}
+                            sizes="(max-width: 640px) 160px, 192px"
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
                 )}
               </li>
             ))}
           </ul>
-          <p className="mt-4 italic text-muted">{customFantasiesNote}</p>
         </div>
       </section>
 
@@ -135,11 +173,15 @@ export default function ExperiencesPage() {
           imagePaths={fantasyImagePaths}
           altPrefix="Jester fantasy"
           className="mb-6"
+          topCropIndices={[12]}
+          positionByIndex={{ 9: "center 25%" }}
         />
         <ScrollGallery
           imagePaths={childrensImagePaths}
           altPrefix="Children's entertainment"
           className="mb-6"
+          topCropIndices={[2]}
+          positionByIndex={{ 6: "center 25%" }}
         />
 
         {/* Adult gallery - revealable */}
