@@ -21,7 +21,6 @@ export interface HomeContent {
   ctaButtonHref: string;
   reviewQuotes: string[];
   landingImagePaths: string[];
-  signatureVideoPath: string;
   videoAriaLabel: string;
   videoAspectRatio: string;
   galleryAltPrefix: string;
@@ -45,7 +44,6 @@ export interface AboutContent {
   whyChooseItems: string[];
   testimonialQuotes: string[];
   aboutImagePaths: string[];
-  signatureVideoPath: string;
   videoAriaLabel: string;
   /** e.g. "16/9" — frame hugs video with no letterboxing when matched to actual video ratio */
   videoAspectRatio: string;

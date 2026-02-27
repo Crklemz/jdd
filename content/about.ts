@@ -4,8 +4,7 @@ export const aboutContent: AboutContent = {
   welcomeHeading: "Welcome Luminous Traveler!",
   preJesterHeading: "My Pre-Jester Biography",
   preJesterParagraphs: [
-    "I was born in Lima, Peru as Daniel Alonso Abate Pella and I was raised in Asuncion, Paraguay.",
-    "In 2001 I came to MN to study chemistry, I graduated from Macalester College in 2005 and got my Ph.D. in Chemical Biology from the University of Minnesota in 2012.",
+    "I was born in Lima, Peru as Daniel Alonso Abate Pella and I was raised in Asuncion, Paraguay. In 2001 I came to MN to study chemistry, I graduated from Macalester College in 2005 and got my Ph.D. in Chemical Biology from the University of Minnesota in 2012.",
     "In 2023, I left the world of chemistry to pursue my passions and launched as a fantasy entertainer, nightlife producer & transformational coach.",
   ],
   becomingHeading: "Becoming Jester Dapper Dan",
@@ -48,7 +47,6 @@ export const aboutContent: AboutContent = {
     "/about-images/20.jpg",
     "/about-images/21.jpg",
   ],
-  signatureVideoPath: "/jddintro.mp4",
   videoAriaLabel: "Jester Dapper Dan signature introduction",
   videoAspectRatio: "16/9",
   galleryAltPrefix: "About Jester Dapper Dan",

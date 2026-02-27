@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { homeContent } from "@/content";
-import { HeroVideo } from "./components/HeroVideo";
 import { RotatingQuote } from "./components/RotatingQuote";
 import { ScrapbookSection } from "./components/ScrapbookSection";
 import { ScrollGallery } from "./components/ScrollGallery";
@@ -18,7 +17,6 @@ export default function HomePage() {
     reviewQuotes,
     scrapbookImagePaths,
     landingImagePaths,
-    signatureVideoPath,
     videoAriaLabel,
     videoAspectRatio,
     galleryAltPrefix,
@@ -91,12 +89,15 @@ export default function HomePage() {
             className="relative w-full lg:w-[80vw] lg:max-w-[80vw]"
             style={{ aspectRatio: videoAspectRatio }}
           >
-            <HeroVideo
-              src={signatureVideoPath}
-              ariaLabel={videoAriaLabel}
-              className="absolute inset-0 h-full w-full object-cover"
-              frameVariant="purple"
-            />
+              <div className="absolute hero-video-neon-frame-purple inset-0 overflow-hidden rounded-lg">
+              <iframe
+          src='https://www.youtube.com/embed/Ux6b-vC2UDU?autoplay=1&mute=1&cc_load_policy=1'
+          title={videoAriaLabel}
+          className={`object-cover absolute inset-0 h-full w-full border-0`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+    </div>
           </div>
         </section>
 

@@ -74,7 +74,6 @@ export const homeContent: HomeContent = {
     "/landing-images/10.jpg",
     "/landing-images/11.jpg",
   ],
-  signatureVideoPath: "/jddintro.mp4",
   videoAriaLabel: "Jester Dapper Dan signature video",
   videoAspectRatio: "16/9",
   galleryAltPrefix: "Jester Dapper Dan",
