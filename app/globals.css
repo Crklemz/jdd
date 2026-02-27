@@ -506,6 +506,32 @@ body {
   animation: hero-video-glow-purple 2.5s ease-in-out infinite;
 }
 
+/* Scrapbook picture frames: one neon color per image (blue, purple, magenta, green, orange, indigo) */
+.scrapbook-frame-neon-blue {
+  border: 2px solid var(--color-neon-blue);
+  box-shadow: var(--shadow-neon-blue);
+}
+.scrapbook-frame-neon-purple {
+  border: 2px solid var(--color-neon-purple);
+  box-shadow: var(--shadow-neon-purple);
+}
+.scrapbook-frame-neon-magenta {
+  border: 2px solid var(--color-neon-magenta);
+  box-shadow: var(--shadow-neon-magenta);
+}
+.scrapbook-frame-neon-green {
+  border: 2px solid var(--color-neon-green);
+  box-shadow: var(--shadow-neon-green);
+}
+.scrapbook-frame-neon-orange {
+  border: 2px solid var(--color-neon-orange);
+  box-shadow: var(--shadow-neon-orange);
+}
+.scrapbook-frame-neon-indigo {
+  border: 2px solid var(--color-neon-indigo);
+  box-shadow: var(--shadow-neon-indigo);
+}
+
 .cta-rainbow-pulsate-text {
   background: linear-gradient(
     90deg,

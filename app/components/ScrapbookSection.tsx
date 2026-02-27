@@ -2,6 +2,14 @@
 
 const ROTATIONS = ["-rotate-3", "rotate-2", "-rotate-2", "rotate-3", "-rotate-1", "rotate-2"] as const;
 const Z_INDICES = ["z-0", "z-10", "z-20", "z-30", "z-40", "z-10"] as const;
+const NEON_FRAME_CLASSES = [
+  "scrapbook-frame-neon-blue",
+  "scrapbook-frame-neon-purple",
+  "scrapbook-frame-neon-magenta",
+  "scrapbook-frame-neon-green",
+  "scrapbook-frame-neon-orange",
+  "scrapbook-frame-neon-indigo",
+] as const;
 
 /** Spread-out scrapbook: mobile, md, then lg+ (laptop/desktop) for more spread and size */
 const SIZE_CLASSES = [
@@ -41,7 +49,7 @@ export function ScrapbookSection({
           {topRow.map((src, i) => (
             <figure
               key={src + i}
-              className={`relative ${Z_INDICES[i]} ${ROTATIONS[i]} ${SIZE_CLASSES[i]} overflow-hidden rounded-lg border-2 border-border bg-card p-2 shadow-lg`}
+              className={`relative ${Z_INDICES[i]} ${ROTATIONS[i]} ${SIZE_CLASSES[i]} ${NEON_FRAME_CLASSES[i]} overflow-hidden rounded-lg bg-card shadow-lg`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -59,7 +67,7 @@ export function ScrapbookSection({
             return (
               <figure
                 key={src + j}
-                className={`relative ${Z_INDICES[j]} ${ROTATIONS[j]} ${SIZE_CLASSES[j]} overflow-hidden rounded-lg border-2 border-border bg-card p-2 shadow-lg`}
+                className={`relative ${Z_INDICES[j]} ${ROTATIONS[j]} ${SIZE_CLASSES[j]} ${NEON_FRAME_CLASSES[j]} overflow-hidden rounded-lg bg-card shadow-lg`}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
