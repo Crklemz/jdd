@@ -21,10 +21,47 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jdd.com";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jester Dapper Dan",
+  jobTitle: "Fantasy Entertainer",
+  areaServed: {
+    "@type": "Place",
+    name: "Minneapolis-Saint Paul, MN",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "MN",
+      addressLocality: "Minneapolis-Saint Paul",
+    },
+  },
+  url: siteUrl,
+};
+
 export const metadata: Metadata = {
-  title: "Jester Dapper Dan | Fantasy Court Jester & Entertainment",
+  title:
+    "Jester Dapper Dan | Fantasy Entertainer, trickster comedian & LED Performer",
   description:
     "Chic, whimsical, effervescent™ – Jester Dapper Dan brings incomparable elegance, wit and enthusiasm to your event. Book the most fun, creative merryman in town.",
+  keywords: [
+    "Minneapolis event entertainer",
+    "LED flow artist",
+    "Comedian near me",
+    "Circus performer",
+    "Costume character jester",
+    "Transformative event host",
+    "Event consultant",
+  ],
+  openGraph: {
+    title:
+      "Jester Dapper Dan | Fantasy Entertainer, trickster comedian & LED Performer",
+    description:
+      "Chic, whimsical, effervescent™ – Jester Dapper Dan brings incomparable elegance, wit and enthusiasm to your event. Book the most fun, creative merryman in town.",
+    url: siteUrl,
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +74,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="min-h-screen antialiased">
         <NeonBackground />
         <Nav />
