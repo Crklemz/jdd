@@ -2,6 +2,7 @@ import { consultingContent } from "@/content";
 import { NeonCard } from "../components/NeonCard";
 import Link from "next/link";
 import type { NeonCardVariant } from "../components/NeonCard";
+import Image from "next/image";
 
 const VALUE_BOX_VARIANTS: NeonCardVariant[] = ["green", "blue", "purple"];
 
@@ -37,6 +38,8 @@ export default function ConsultingPage() {
           <h1 className="text-4xl font-bold md:text-5xl neon-text-green text-shadow-neon-green">
             {welcomeHeading}
           </h1>
+          <Image src='/about-images/21.jpg' width={1000} height={1000} alt="Entertainment Solutions consulting" />
+
           <p className="mx-auto mt-4 text-lg text-muted-foreground">
             {introParagraph}
           </p>
@@ -45,7 +48,7 @@ export default function ConsultingPage() {
               <li key={i}>{bullet}</li>
             ))}
           </ul>
-        </div>
+        </div>  
       </section>
 
       {/* Problem statement */}
@@ -66,8 +69,12 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-8 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-3xl space-y-6 text-center text-muted-foreground">
+        <Image src='/about-images/21.jpg' width={1000} height={1000} alt="Entertainment Solutions consulting" />
+
           <p className="text-lg leading-relaxed">{entertainmentScienceIntro}</p>
           <p className="text-lg leading-relaxed">{credentialsParagraph}</p>
+          <Image src='/about-images/21.jpg' width={1000} height={1000} alt="Entertainment Solutions consulting" />
+
           <blockquote className="font-display text-xl italic neon-text-green text-shadow-neon-green md:text-2xl">
             &ldquo;{signatureQuote}&rdquo;
           </blockquote>
@@ -81,6 +88,8 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-3xl">
+        <Image src='/about-images/21.jpg' width={1000} height={1000} alt="Entertainment Solutions consulting" />
+
           <h2 className="text-center text-2xl font-semibold uppercase tracking-wide neon-text-green text-shadow-neon-green md:text-3xl">
             {signaturePackageHeading}
           </h2>
@@ -141,6 +150,8 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-5xl">
+        <Image src='/about-images/21.jpg' width={1000} height={1000} alt="Entertainment Solutions consulting" />
+
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {valueBoxes.map((box, i) => (
               <NeonCard
@@ -165,6 +176,8 @@ export default function ConsultingPage() {
         className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-4 pb-10 sm:px-6 md:px-8"
       >
         <div className="relative z-10 mx-auto max-w-2xl text-center">
+        <Image src='/about-images/21.jpg' width={1000} height={1000} alt="Entertainment Solutions consulting" />
+
           <h2 className="text-2xl font-semibold uppercase tracking-wide neon-text-green text-shadow-neon-green md:text-3xl">
             {comingSoonHeading}
           </h2>
