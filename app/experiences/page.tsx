@@ -192,7 +192,8 @@ export default function ExperiencesPage() {
           <button
             type="button"
             onClick={() => setAdultGalleryOpen((open) => !open)}
-            className="rounded-full border border-border bg-card px-6 py-2 text-accent transition hover:bg-border"
+            // center the button on the page horizontally
+            className="mx-auto block uppercase tracking-widest rounded-full border border-border bg-card px-6 py-2 text-accent transition hover:bg-border"
           >
             {adultGalleryOpen ? "Hide adult gallery" : adultGalleryLabel}
           </button>
