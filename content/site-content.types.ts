@@ -1,6 +1,6 @@
 /**
  * Shared types for JDD site content.
- * Edit content in content/home.ts, about.ts, experiences.ts, booking.ts.
+ * Edit content in content/home.ts, about.ts, experiences.ts, booking.ts, consulting.ts.
  */
 
 export interface HomeContent {
@@ -100,4 +100,51 @@ export interface BookingContent {
   introParagraphs: string[];
   workflowSteps: string[];
   landingImagePaths: string[];
+}
+
+export interface ConsultingGetPhase {
+  roman: string;
+  title: string;
+  items: string[];
+}
+
+export interface ConsultingGetPackage {
+  title: string;
+  description: string;
+  phases: ConsultingGetPhase[];
+  deliverables: string[];
+  tagline: string;
+}
+
+export interface ConsultingIdeaSession {
+  title: string;
+  description: string;
+  outcome: string;
+}
+
+export interface ConsultingValueBox {
+  title: string;
+  description: string;
+}
+
+export interface ConsultingContent {
+  welcomeHeading: string;
+  introParagraph: string;
+  questionBullets: string[];
+  problemStatement: string;
+  entertainmentScienceIntro: string;
+  credentialsParagraph: string;
+  signatureQuote: string;
+  credentialsParagraph2: string;
+  signaturePackageHeading: string;
+  getPackage: ConsultingGetPackage;
+  ideaSession: ConsultingIdeaSession;
+  valueBoxes: ConsultingValueBox[];
+  customPackagesNote: string;
+  comingSoonHeading: string;
+  comingSoonItems: string[];
+  sectionImagePaths: string[];
+  galleryAltPrefix: string;
+  ctaButtonLabel: string;
+  ctaButtonHref: string;
 }
