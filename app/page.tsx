@@ -115,10 +115,10 @@ export default function HomePage() {
               </p>
             </div>
             <div className="space-y-8 mb-8 lg:mb-0 text-center">
-              <p className="mx-auto max-w-4xl text-2xl leading-snug text-foreground md:text-3xl">
+              <p className="text-lg uppercase tracking-widest sm:text-xl md:text-2xl">
                 {hero.identity}
               </p>
-              <p className="mx-auto max-w-4xl text-2xl leading-snug text-foreground md:text-3xl">
+              <p className="text-lg uppercase tracking-widest sm:text-xl md:text-2xl">
                 {hero.identity2}
               </p>
             </div>
