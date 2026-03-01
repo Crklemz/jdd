@@ -212,7 +212,7 @@ export default function HomePage() {
           <div className="flex w-full flex-col items-stretch gap-0 p-4 sm:p-6 md:p-8 lg:flex-row lg:items-center">
             <div className="order-2 mt-6 flex min-w-0 flex-1 flex-col lg:order-1 lg:mt-0 lg:min-w-4/7 lg:pr-6 xl:pr-8">
               <div className="flex flex-1 flex-col items-center">
-                <p className="mb-4 text-center text-xl text-foreground sm:mb-5 sm:text-2xl md:text-3xl">
+                <p className="mb-4 tracking-wider uppercase text-center text-xl text-foreground sm:mb-5 sm:text-2xl md:text-3xl">
                   {eventTypesIntro}
                 </p>
               </div>
