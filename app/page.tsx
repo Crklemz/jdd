@@ -54,26 +54,29 @@ export default function HomePage() {
           </div>
         </section> */}
 
-        {/* Tagline at top */}
+        {/* Tagline at top: signature overlaid at bottom of landing image 1 */}
         <section
           aria-label="Tagline"
           className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pb-10 pt-2"
         >
           <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center gap-4 px-4 text-center sm:gap-6 md:flex-row md:gap-4">
-            <Image
-              src="/jdd-full-signature.png"
-              alt="Jester Dapper Dan"
-              width={320}
-              height={96}
-              className="order-1 w-full max-w-[240px] sm:max-w-[280px] md:max-w-3xl"
-            />
-            <Image
-              src="/landing-images/1.jpg"
-              alt="jdd profile picture"
-              width={200}
-              height={100}
-              className="order-2 w-full max-w-[160px] rounded-lg sm:max-w-[200px] md:order-3 md:max-w-2xl"
-            />
+            {/* Landing image 1 with signature overlaid at bottom */}
+            <div className="order-1 relative w-full max-w-[400px] sm:max-w-[400px] md:order-3 md:max-w-2xl">
+              <Image
+                src="/landing-images/1.jpg"
+                alt="jdd profile picture"
+                width={400}
+                height={400}
+                className="w-full rounded-full object-cover aspect-square"
+              />
+              <Image
+                src="/jdd-full-signature.png"
+                alt="Jester Dapper Dan"
+                width={320}
+                height={96}
+                className="absolute -bottom-5 left-0 right-0 z-10 mx-auto w-full max-w-[85%] object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+              />
+            </div>
             <p className="order-3 text-lg uppercase tracking-widest neon-text-pink text-shadow-neon-pink-strong sm:text-xl md:order-2 md:text-2xl">
               {hero.tagline}
             </p>
