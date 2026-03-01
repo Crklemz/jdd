@@ -52,5 +52,5 @@ export const aboutContent: AboutContent = {
   videoAspectRatio: "16/9",
   galleryAltPrefix: "About Jester Dapper Dan",
   ctaButtonLabel: "Bring Jester Dapper Dan to your event!",
-  ctaButtonHref: "/booking#inquiry",
+  ctaButtonHref: "/booking#quick-inquiry",
 };

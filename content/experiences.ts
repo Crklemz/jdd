@@ -142,5 +142,5 @@ export const experiencesContent: ExperiencesContent = {
   ],
   adultGalleryLabel: "View adult gallery",
   ctaButtonLabel: "Bring Jester Dapper Dan to your event!",
-  ctaButtonHref: "/booking#inquiry",
+  ctaButtonHref: "/booking#quick-inquiry",
 };

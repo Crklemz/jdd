@@ -39,9 +39,11 @@ export default function BookingPage() {
               <li key={i}>{step}</li>
             ))}
           </ol>
-          <p className="mx-auto text-center uppercase tracking-widest text-lg mt-6 space-y-2 text-muted-foreground">
-            Do you have a quick booking inquiry? Message me at <a href="mailto:portal@jesterdapperdan.com" className="text-accent hover:text-accent-hover">portal@jesterdapperdan.com</a>
-          </p>
+          <div id="quick-inquiry" className="scroll-mt-32">
+            <p className="mx-auto text-center uppercase tracking-widest text-lg mt-6 space-y-2 text-muted-foreground">
+              Do you have a quick booking inquiry? Message me at <a href="mailto:portal@jesterdapperdan.com" className="text-accent hover:text-accent-hover">portal@jesterdapperdan.com</a>
+            </p>
+          </div>
         </div>
       </section>
 

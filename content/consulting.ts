@@ -91,5 +91,5 @@ export const consultingContent: ConsultingContent = {
   sectionImagePaths: [],
   galleryAltPrefix: "Entertainment Solutions consulting",
   ctaButtonLabel: "Book a consultation",
-  ctaButtonHref: "/booking#inquiry",
+  ctaButtonHref: "/booking#quick-inquiry",
 };

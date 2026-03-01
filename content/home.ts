@@ -53,7 +53,7 @@ export const homeContent: HomeContent = {
     "conventions",
   ],
   ctaButtonLabel: "Bring Jester Dapper Dan to your event!",
-  ctaButtonHref: "/booking#inquiry",
+  ctaButtonHref: "/booking#quick-inquiry",
   reviewQuotes: [
     "Simply amazing!",
     "Stunning!",
