@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jdd.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jesterdapperdan.com";
 
 const structuredData = {
   "@context": "https://schema.org",
